@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -e
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$ROOT"
+
+# Setup venv on first run
+if [ ! -d ".venv" ]; then
+  echo "[setup] Opretter virtuel miljø og installerer afhængigheder …"
+  python3 -m venv .venv
+  source .venv/bin/activate
+  python -m pip install --upgrade pip >/dev/null
+  pip install -r requirements.txt
+else
+  source .venv/bin/activate
+fi
+
+OUT_HTML="reports/site/index.html"
+OUT_JSON="reports/scraped.json"
+mkdir -p "$(dirname "$OUT_HTML")"
+
+while true; do
+  echo
+  echo "Bagsiden – Tænkeboksen (vælg handling)"
+  echo "1) Scrape (hent opgaver)"
+  echo "2) Solve (LLM-løs opgaver)"
+  echo "3) Evaluate (hold op mod officielle løsninger)"
+  echo "4) Site (byg HTML-rapport)"
+  echo "5) All (scrape + solve + evaluate + site)"
+  echo "6) Solve one (vælg index 1-10)"
+  echo "7) Exit"
+  read -rp "> " choice
+  case "$choice" in
+    1)
+      python -m src.main --stage scrape --out-json "$OUT_JSON"
+      ;;
+    2)
+      python -m src.main --stage solve --out-json "$OUT_JSON"
+      ;;
+    3)
+      python -m src.main --stage evaluate --out-json "$OUT_JSON"
+      ;;
+    4)
+      python -m src.main --stage site --out-html "$OUT_HTML"
+      echo "HTML: $OUT_HTML"
+      ;;
+    5)
+      python -m src.main --stage all --out-json "$OUT_JSON" --out-html "$OUT_HTML"
+      echo "Færdig. HTML: $OUT_HTML"
+      ;;
+    6)
+      read -rp "Index (1-10): " idx
+      python -m src.main --stage solve --one "$idx"
+      ;;
+    7)
+      exit 0
+      ;;
+    *)
+      echo "Vælg et tal 1-7"
+      ;;
+  esac
+done
+
+

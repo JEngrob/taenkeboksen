@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang=da>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <title>Tænkeboksen – Opgaver med løsninger</title>
+  <style>
+    :root { --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#0ea5e9; --border:#e2e8f0 }
+    body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji'; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 16px; }
+    header { margin-bottom: 24px; }
+    header h1 { margin: 0 0 6px 0; font-size: 28px; }
+    header .subtitle { color: var(--muted); font-size: 14px; }
+    .task { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(15,23,42,0.06) }
+    .task-title { font-size: 20px; margin: 0 0 6px 0; }
+    .task-meta a { color: var(--accent); text-decoration: none; word-break: break-all; }
+    .block { margin-top: 10px; }
+    .block h3 { margin: 0 0 6px 0; font-size: 14px; color: var(--muted); font-weight: 700; letter-spacing:.02em }
+    pre { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; }
+    nav { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(255,255,255,0.85); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 8px 16px; display: flex; gap: 10px; overflow-x: auto; }
+    .pill { display: inline-block; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--text); text-decoration: none; font-size: 13px; white-space: nowrap; background:#fff }
+    .pill:hover { border-color: var(--accent); color: var(--accent); }
+    .answer .presentation { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="pill" href="#task-1">1. Opgave 250 – Hent hr. Petersen | Ingeniøren</a><a class="pill" href="#task-2">2. Opgave 414 – Del kvadratet i trekanter | Ingeniøren</a><a class="pill" href="#task-3">3. Opgave 220 – Hvorfor vinder naboen i lotto? | Ingeniøren</a><a class="pill" href="#task-4">4. Opgave 409 – Fold landkortet rigtigt | Ingeniøren</a><a class="pill" href="#task-5">5. Opgave 104 – Mål et reb med abens mors alder | Ingeniøren</a><a class="pill" href="#task-6">6. Opgave 305 – Sæt togene på plads | Ingeniøren</a><a class="pill" href="#task-7">7. Opgave 395 – Mål et skævt kvadrat | Ingeniøren</a><a class="pill" href="#task-8">8. Opgave 279 – Smid lasten over bord | Ingeniøren</a><a class="pill" href="#task-9">9. Opgave 105 – Spis med en bogorm | Ingeniøren</a><a class="pill" href="#task-10">10. Opgave 378 – Del whiskyen i tre glas | Ingeniøren</a>
+    </div>
+  </nav>
+  <div class="container">
+    <header>
+      <h1>Tænkeboksen – Opgaver med løsninger</h1>
+      <div class="subtitle">Genereret 2025-08-10T06:48:13</div>
+    </header>
+    
+                <section id="task-1" class="task">
+                  <h2 class="task-title">1. Opgave 250 – Hent hr. Petersen | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/hent-hr-petersen" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/hent-hr-petersen</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Hr. Petersen spadserer med 4 km/t.</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at finde hastigheden, hvormed hr. Petersen spadserer, når han ankommer en time tidligere og møder fru Petersen på vej hjem.
+
+Klassificering: fysik, optimering
+
+Data:
+- Fru Petersens hastighed: 50 km/t
+- Normal ankomsttid for hr. Petersen: 16.30
+- Tidligere ankomsttid: 15.30
+- Tidligere hjemkomst: 16.15 (15 minutter før normalt)
+- Tidsforskel: 1 time (hr. Petersen ankommer 1 time før)
+
+Metode: Brug af afstand = hastighed * tid til at opstille ligninger for både fru og hr. Petersen.
+
+Trin:
+- Lad d være afstanden fra stationen til hjemmet.
+- Fru Petersen kører i 30 minutter (0,5 timer) for at nå hjem, så d = 50 km/t * 0,5 t = 25 km.
+- Hr. Petersen går i 15 minutter (0,25 timer) og har 45 minutter (0,75 timer) til at gå hjem, da han ankommer en time tidligere.
+- Lad v være hastigheden for hr. Petersen. Han går d = v * 0,25 t og d = v * 0,75 t.
+- Da d er det samme, kan vi sætte ligningerne lig med hinanden: v * 0,25 = 25 og v * 0,75 = 25.
+- Løs for v: v = 25 / 0,25 = 100 km/t og v = 25 / 0,75 = 33,33 km/t.
+
+Kontrol: Kontroller at hastigheden for hr. Petersen giver mening i forhold til den tid han har til at gå og den afstand han skal dække.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 250:
+
+Fru Petersen kører hver eftermiddag på samme tidspunkt til stationen for at hente sin mand. Hun kører 50 km/t hele vejen. Han ankommer normalt med toget kl. 16.30, netop som hun ankommer med bilen.
+
+En dag ankommer hr. Petersen med toget en time tidligere, og da denne opgave foregår længe før mobiltelefonernes indtog, begynder han bare at spadsere hjemad. På vejen møder han naturligvis fru Petersen i bilen, og sammen når de hjem præcis et kvarter tidligere, end de plejer. Hvor hurtigt spadserer hr. Petersen?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Løsning på opgave 250: Hent hr. Petersen
+
+Hr. Petersen går eller småløber 7,14 km i timen.
+
+Da han går sin kone i møde, ender turen med, at hun sparer et kvarters kørsel, hvilket med 50 km/t er 12,5 km. Det er afstanden fra mødestedet til stationen og tilbage igen.
+
+Hr. og fru Petersen mødes et halvt kvarter før kl. 16.30, og han har derfor gået 6,25 km på 7/8 time. Det giver den hurtige ganghastighed 50/7 km/t. Bemærk, at vi stadig ikke ved, hvor langt fra stationen hr. og fru Petersen bor – kun at det er mere end 6,25 km.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver, at Hr. Petersen spadserer med 4 km/t, mens den officielle løsning angiver, at han går eller småløber med 7,14 km/t. Der er en betydelig forskel i hastigheden, hvilket gør det foreslåede svar fagligt forkert. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-2" class="task">
+                  <h2 class="task-title">2. Opgave 414 – Del kvadratet i trekanter | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/del-kvadratet-i-trekanter" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/del-kvadratet-i-trekanter</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">4 linjer</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at opdele et kvadrat i spidsvinklede trekanter ved hjælp af rette linjer.
+
+Klassificering: Geometri, optimering
+
+Data:
+- Kvadrat med 4 sider
+- Mål: Opdeling i spidsvinklede trekanter
+
+Metode: Undersøgelse af mulige opdelinger af kvadratet med rette linjer for at sikre, at alle trekanter er spidsvinklede.
+
+Trin:
+- Start med et kvadrat.
+- Tegn en linje fra et hjørne til midten af den modsatte side.
+- Gentag for de øvrige hjørner.
+- Resultatet er 4 trekanter, som alle er spidsvinklede.
+
+Kontrol: Kontroller at alle trekanter har vinkler mindre end 90 grader ved at analysere de dannede vinkler.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 414:
+
+Ved hjælp af rette linjer skal et kvadrat deles op i lutter spidsvinklede trekanter, altså hvor alle vinkler er mindre end 90 grader. Hvor få linjer kan man gøre det med?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Kvadratet kan deles op i spidsvinklede trekanter med ni linjer – og resultatet bliver otte trekanter. I praksis kan trekanternes størrelse og linjernes placering naturligvis varieres i det uendelige.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver "4 linjer", mens den officielle løsning nævner "ni linjer" for at opdele kvadratet i otte trekanter. Der er en klar uoverensstemmelse i antallet af linjer, hvilket gør svaret fagligt forkert. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-3" class="task">
+                  <h2 class="task-title">3. Opgave 220 – Hvorfor vinder naboen i lotto? | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/hvorfor-vinder-naboen-i-lotto" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/hvorfor-vinder-naboen-i-lotto</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Sandsynlighed for ikke nabotal: 0,000000000</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Sandsynligheden for at der ikke er nabotal blandt 9 udtrukne tal fra 1-36.
+
+Klassificering: sandsynlighed
+
+Data:
+- Total antal tal: 36
+- Antal udtrukne tal: 9
+- Nabotal: Tal der adskilles med 1 (f.eks. 1 og 2)
+
+Metode: Beregn sandsynligheden for at vælge 9 tal uden nabotal ved at anvende kombinatorik.
+
+Trin:
+- Bestem det totale antal måder at vælge 9 tal fra 36: C(36, 9).
+- Identificer det antal måder at vælge 9 tal uden nabotal: Brug en transformation til at undgå nabotal.
+- Beregn det antal gyldige valg ved at omdanne problemet til at vælge 9 tal fra 28 (36-9+1).
+- Beregn sandsynligheden som forholdet mellem gyldige valg og totale valg.
+
+Kontrol: Sammenlign det beregnede antal gyldige valg med det totale antal valg for at sikre korrekthed.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 220:
+
+Meget tit er der nabotal blandt de ni udtrukne tal i lotto. Men hvad er egentlig sandsynligheden for, at der ikke er nabotal blandt de ni udtrukne tal (syv vindertal og to tillægstal), trukket blandt tallene 1-36?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Vi undgår kun nabotal blandt de ni udtrukne lottotal u 7,3 procent af trækningerne.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver en sandsynlighed på 0,000000000, hvilket ikke stemmer overens med den officielle løsning, der angiver en sandsynlighed på 7,3 procent for at undgå nabotal. Der er en klar uoverensstemmelse i de numeriske værdier. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-4" class="task">
+                  <h2 class="task-title">4. Opgave 409 – Fold landkortet rigtigt | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/fold-landkortet-rigtigt" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/fold-landkortet-rigtigt</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Rækkefølge: 1, 2, 3, 4, 5, 6, 7, 8</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at folde et kort opdelt i kvadrater, så tallene kommer i rækkefølge fra 1 til 8.
+
+Klassificering: Geometri, logik
+
+Data:
+- Kortet er opdelt i 8 kvadrater i 4x2 format.
+- Nummerering af kvadraterne: 1, 2, 3, 4, 5, 6, 7, 8.
+- Folding må kun ske langs kanterne.
+
+Metode: Identificere rækkefølgen af kvadraterne og bestemme foldemønsteret.
+
+Trin:
+- Analyser det første kort: 1 8 7 4 / 2 3 6 5.
+- Bestem hvordan kvadraterne skal foldes for at opnå rækkefølgen 1-8.
+- Fold kortet først på langs og derefter på tværs for at samle kvadraterne.
+
+Kontrol: Kontroller at rækkefølgen af kvadraterne er 1, 2, 3, 4, 5, 6, 7, 8 efter foldning.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 409:
+
+Et landkort på papir er opdelt i 8 kvadrater placeret som 4 gange 2. Papiret må kun foldes efter kvadraternes kanter, altså enten på langs eller tværs, men aldrig diagonalt eller på andre måder skråt.
+
+Kvadraterne er nummereret fra 1 til 8, og det gælder om at få foldet kortet, så der dannes et sammenfoldet kvadrat, hvor de otte tal ligger bag hinanden og kommer i rækkefølge fra 1 (øverst) til 8 (nederst). Om hvert ciffer står spejlvendt eller på hovedet eller på bagsiden af papiret er ligemeget, bare rækkefølgen passer.
+
+Det første kort ser sådan ud:
+
+1 8 7 4
+
+2 3 6 5
+
+Det næste er lidt sværere:
+
+1 8 2 7
+
+4 5 3 6</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Det første kort
+
+1 8 7 4
+
+2 3 6 5
+
+klares ved, at højre ­halvdel først foldes bagud bag den venstre. Dernæst foldes øverste halvdel bagud bag den nederste. Nu skal 4 og 5 inde i midten foldes fremad mellem 3 og 6, hvorefter venstre del med 1 og 2 foldes fremad (foran 3) – og så ligger 1 til 8 i rækkefølge som ønsket.
+
+1 8 2 7
+
+4 5 3 6
+
+er lidt sværere – ikke mindst at forklare. Først foldes nederste halvdel bagud bag den øverste. Venstre ­fjerdedel (med 1 og 4) bliver på sin plads, mens resten foldes bagud.
+
+Og så kommer det svære: 6 og 7 stikkes nu ind mellem 1 og 4 og føres videre ind mellem 5 og 8. Det betyder, at 2 og 3 samtidig ender mellem 1 og 4 – og at vi ender med 1 til 8 i den rigtige rækkefølge.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver rækkefølgen 1, 2, 3, 4, 5, 6, 7, 8, men den officielle løsning beskriver en mere kompleks proces, der resulterer i en anden rækkefølge (1, 8, 2, 7, 4, 5, 3, 6). Der er derfor ikke overensstemmelse mellem det foreslåede svar og den officielle løsning. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-5" class="task">
+                  <h2 class="task-title">5. Opgave 104 – Mål et reb med abens mors alder | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/maal-et-reb-med-abens-mors-alder" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/maal-et-reb-med-abens-mors-alder</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Rebet er 2 meter langt.</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at finde længden af et reb, der hænger i en talje med en abe og et lod, under hensyntagen til vægt og aldersforhold.
+
+Klassificering: Matematik, logik, fysik
+
+Data:
+- Rebets vægt: 250 g/m
+- Aben og morens samlede alder: 4 år
+- Aben vejer: morens alder i kg
+- Rebet er i ligevægt
+
+Metode: Brug af algebra til at opstille ligninger baseret på de givne forhold og finde længden af rebet.
+
+Trin:
+- Lad abens alder være x år, så morens alder er 4 - x år.
+- Aben vejer x kg, og moren vejer 4 - x kg.
+- Sæt op: 4 - x = 2 * (x - (4 - 3 * (4 - x))) for at finde x.
+- Løs ligningen for x.
+- Beregn loddets vægt som forskellen mellem abens vægt og loddets vægt.
+- Brug vægten af rebet og loddet til at finde længden af rebet.
+
+Kontrol: Kontroller at den fundne længde opfylder betingelserne for ligevægt og vægtforhold.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 104:
+
+Et reb hænger i en talje. Et lod er bundet i rebets ene ende, mens en abe hænger i den anden. Rebet er lige langt i begge sider, og der er ligevægt.
+
+Rebet vejer 250 g pr. meter. Aben og dens mor er tilsammen fire år gamle, og aben vejer lige så mange kg som morens alder er i år.
+
+Så kommer det svære: Abens mor er dobbelt så gammel, som aben var, da dens mor var halvt så gammel, som aben vil være, når den er tre gange så gammel, som  dens mor var, da hun var tre gange så gammel som aben.
+
+Vægten af hele rebet plus loddet i enden er halvanden gang så meget som forskellem mellem loddets vægt og loddets og abens vægt.
+
+Hvor langt er rebet?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Rebet er 5 meter langt. Løsningen involverer i alt 14 ligninger, som heldigvis er ganske simple at løse. Husk, at når abens mor bliver et antal år ældre, så gør aben det naturligvis også.
+
+Det fører (efter nogle mellemregninger) til, at aben nu er halvandet år gammel, mens dens mor er to et halvt år. Så vejer aben 2,5 kg, og rebet det halve (ifølge den kryptiske formulering i opgavens sidste afsnit). Dermed er det 5 meter langt.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver, at rebet er 2 meter langt, mens den officielle løsning angiver, at det er 5 meter langt. Dette er en betydelig forskel, der ikke falder inden for den angivne tolerance. Derudover er der ingen sammenhæng mellem de to svar, da det foreslåede svar ikke adresserer de mellemregninger, der fører til den officielle løsning. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-6" class="task">
+                  <h2 class="task-title">6. Opgave 305 – Sæt togene på plads | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/saet-togene-paa-plads" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/saet-togene-paa-plads</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Bent: Bromme, spor 4, Grisen; Dorte: Hellum, spor 6, Hunden; Erik: ?, spor 2, Hønen; Anne: Torsted, spor 5, Koen; Claus: ?, spor 1, Hesten; Kirsten: Venslev, spor 3, Hunden.</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at bestemme lokomotivførernes oprindelse, sporplacering og togtyper baseret på givne betingelser.
+
+Klassificering: logik, optimering
+
+Data:
+- Spor 1: Claus, ved siden af Hønen
+- Spor 2: ?
+- Spor 3: Hesten
+- Spor 4: Ikke Bent eller Dorte
+- Spor 5: Klastrup
+- Spor 6: Ikke Bent eller Dorte
+- Lokomotivførere: Bent (Bromme), Dorte, Erik, Anne (Torsted), Claus, Kirsten (Venslev)
+- Tog: Hønen, Grisen, Koen, Hunden, Hesten
+
+Metode: Brug af logiske udsagn og eliminering af muligheder for at finde de korrekte placeringer.
+
+Trin:
+- Identificer spor 1 med Claus og Hønen ved siden af.
+- Spor 5 er Klastrup, og spor 3 er Hesten.
+- Bent og Dorte kan ikke være på spor 4 eller 6.
+- Kirsten fra Venslev er ved siden af Claus, så hun må være på spor 2.
+- Anne kommer fra Torsted og har enten Koen eller Anden.
+- Erik er ved siden af føreren fra Venslev, så han må være på spor 4.
+- Grisen og Hønen er ikke fra Hellum, så Hellum må være forbundet med Dorte.
+- Koen fra Klastrup kom før Kirstens tog Hunden, så Hunden må være på spor 6.
+
+Kontrol: Kontroller at alle betingelser er opfyldt og at ingen spor eller lokomotivførere er overset.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 305:
+
+Opgaven handler om noget så dejlig håndgribeligt som en station, hvor seks lokaltog vender tilbage for natten. De holder på de seks spor (med fortløbende numre) omkring drejeskiven.
+
+Lokomotivførerne Bent og Dorte holder hverken på spor 4 eller 6. Bent kommer fra Bromme. Erik holder ved siden af føreren fra Venslev. Han kommer hverken fra Hellum eller Dalby, men nogle af de andre gør.
+
+Anne kommer fra Torsted, hun har enten ‘Anden’ eller ‘Koen’. Claus holder på spor 1 og ved siden af ‘Hønen’. ‘Grisen’ og ‘Hønen’ er ikke fra Hellum.
+
+Toget fra Klastrup ­holder altid på spor 5. Kirsten fra Venslev holder ved siden af Claus.
+
+Det sidste tog var ‘Hesten’ på spor 3. ‘Koen’ fra Klastrup kom før Kirstens tog ‘Hunden’.
+
+Hvor kommer de ­enkelte lokomotivførere fra, hvor holder de, og hvilke tog har de?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Claus fra Dalby holder på spor 1 med ‘Grisen’, Bent fra Bromme på spor 2 med ‘Hønen’, Dorte fra Hellum på spor 3 med ‘Hesten’, Anne fra Torsted på spor 4 med ‘Anden’, Erik fra Klastrup på spor 5 med ‘Koen’, og endelig holder Kirsten fra Venslev på spor 6 med ‘Hunden’.
+
+Løsningen findes ved at anvende de givne oplysninger én efter én og efterhånden udelukke de fleste kombinationer.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar indeholder flere fejl i både navne, spor og dyrenavne sammenlignet med den officielle løsning. For eksempel er Bent angivet på spor 4 med 'Grisen', mens han ifølge den officielle løsning er på spor 2 med 'Hønen'. Desuden er Claus og Erik ikke korrekt identificeret. 
+
+MATCH.</pre>
+                  </div>
+                </section>
+                
+                <section id="task-7" class="task">
+                  <h2 class="task-title">7. Opgave 395 – Mål et skævt kvadrat | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/maal-et-skaevt-kvadrat-0" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/maal-et-skaevt-kvadrat-0</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Areal = 144</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Der skal findes arealet af et kvadrat dannet af punkterne A, B, C og D, hvor A, B og C ligger på tre parallelle linjer med givet afstand.
+
+Klassificering: geometri
+
+Data:
+- Tre parallelle linjer med afstande 5 og 7
+- Punkterne A, B, C på linjerne
+- Danner et kvadrat
+
+Metode: Brug af afstandene mellem linjerne til at bestemme kvadratets sidelængde.
+
+Trin:
+- Identificer afstandene mellem linjerne: 5 og 7.
+- Sidelængden af kvadratet er lig med den samlede afstand mellem de tre linjer: 5 + 7 = 12.
+- Beregn arealet af kvadratet: Areal = sidelængde^2 = 12^2.
+
+Kontrol: Arealet skal være positivt og svarer til kvadratets dimensioner.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 395:
+
+Tre parallelle linjer ligger med afstandene 5 og 7.
+
+På de tre linjer ligger punkterne A, B og C, som sammen med D udgør hjørnerne i et kvadrat.
+
+Hvad er arealet af dette kvadrat?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Det ‘skæve’ kvadrat har arealet 74. For at finde den løsning tegner vi først en hjælpelinje gennem hjørnet B og vinkelret på de tre parallelle linjer. Derved opstår to lige store, retvinklede trekanter uden for kvadratet, og de har begge kvadratets side s som hypotenuse og kateterne 5 og 7.
+
+Altså gælder s2 = 52 = 74, hvilket netop er kvadratets areal.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver et areal på 144, mens den officielle løsning korrekt angiver arealet som 74. Der er en betydelig forskel mellem de to værdier, og det foreslåede svar er derfor ikke korrekt. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-8" class="task">
+                  <h2 class="task-title">8. Opgave 279 – Smid lasten over bord | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/smid-lasten-over-bord" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/smid-lasten-over-bord</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">0,445 mm</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Opgaven handler om at beregne, hvor meget vandstanden stiger i en cirkulær sø, når en pram med en given last af sten og jernkæde tømmer sin last.
+
+Klassificering: fysik, volumenberegning
+
+Data:
+- Pram længde: 5 m
+- Pram bredde: 4 m
+- Sø diameter: 101,5 m
+- Sø radius: 50,75 m
+- Last: 7,5 ton sten, 3,93 ton jernkæde, 2 x 50 kg olietønder
+- Massefylde sten: 2,5 kg/dm³
+- Massefylde jernkæde: 7,86 kg/dm³
+- Vandets massefylde: 1 kg/dm³
+
+Metode: Beregn det samlede volumen af den tømte last og find derefter, hvor meget dette volumen svarer til i vandstandsstigning i søen.
+
+Trin:
+- Konverter lastens vægt til kg: 7,5 ton = 7500 kg, 3,93 ton = 3930 kg, 2 x 50 kg = 100 kg.
+- Beregn det samlede vægt af lasten: 7500 kg + 3930 kg + 100 kg = 11530 kg.
+- Beregn volumen af sten: V_sten = masse / massefylde = 7500 kg / 2,5 kg/dm³ = 3000 dm³.
+- Beregn volumen af jernkæde: V_kæde = 3930 kg / 7,86 kg/dm³ ≈ 500 dm³.
+- Beregn volumen af olietønder: V_tønder = 2 x 50 kg / 1 kg/dm³ = 100 dm³.
+- Samlet volumen af tømte genstande: V_total = 3000 dm³ + 500 dm³ + 100 dm³ = 3600 dm³.
+- Konverter volumen til m³: 3600 dm³ = 3,6 m³.
+- Beregn søens overfladeareal: A = π * (50,75 m)² ≈ 8077,4 m².
+- Beregn stigning i vandstanden: h = V_total / A = 3,6 m³ / 8077,4 m² ≈ 0,000445 m = 0,445 mm.
+
+Kontrol: Kontroller at den beregnede vandstandsstigning er realistisk i forhold til søens størrelse og den tømte last.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 279:
+
+En pram er 5 meter lang og 4 meter bred og flyder i en lille, cirkulær sø, der har diameteren 101,5 meter og (for enkelhedens skyld) lodrette sider. I prammen sidder fire ­personer, som gerne vil spille kort, selvom der faktisk ikke er plads nok til det.
+
+Derfor smider de lasten over bord: 7,5 ton sten og 3,93 ton jernkæde samt to tomme, lukkede olietønder på hver 50 kg. Stenene og kæden ryger til bunds, mens tønderne flyder.
+
+Hvor meget stiger vandstanden i den lille sø?
+
+For at kunne regne det ud skal I lige vide, at stenenes massefylde er 2,5 kg, og jernkædens massefylde 7,86 i forhold til vands.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Vandstanden i den lille sø falder 0,98 mm, når de ­fire mænd smider sten, kæde og tønder over bord fra deres pram. Så vandet stiger altså ikke, selvom opgaveteksten drilsk havde antydet det.
+
+Forklaringen er helt ­efter gode gamle Arkimedes og hans lov. Når tingene ligger i båden (som flyder), fortrænger de vand svarende til deres vægt. Når de smides over bord (og går til bunds), fortrænger de kun vand svarende til deres rumfang.
+
+Tønderne flyder i begge tilfælde, så de ændrer ikke vandstanden i søen. Sten plus kæde vejer 11,43 ton (svarende til 11.430 liter vand), men fylder kun 3,5 kubikmeter (svarende til 3.500 liter). Ergo fortrænger de 7.930 liter vand mindre, og delt med søens areal giver det en lille millimeter lavere vandstand.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar på 0,445 mm er betydeligt lavere end den officielle løsning, som angiver et fald på 0,98 mm. Der er også en uoverensstemmelse i den fysiske forståelse af problemet, da det ikke korrekt reflekterer den vægt og volumen, der er involveret. Derfor er der ikke en faglig overensstemmelse mellem de to svar. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-9" class="task">
+                  <h2 class="task-title">9. Opgave 105 – Spis med en bogorm | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/spis-med-en-bogorm" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/spis-med-en-bogorm</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">122 mm</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Beregn den samlede afstand, som bogormen bevæger sig fra side 1 i bind 1 til side 200 i bind 3.
+
+Klassificering: geometri, optimering
+
+Data:
+- Hver bog har 200 sider.
+- Tykkelsen af hver side er 0,2 mm.
+- Tykkelsen af omslaget er 2 mm.
+- Antal bind: 3
+
+Metode: Beregning af den samlede tykkelse af bøgerne og afstanden fra side 1 til side 200.
+
+Trin:
+- Beregning af tykkelsen af bind 1: 2 mm (forside) + 200 sider * 0,2 mm + 2 mm (bagside) = 42 mm.
+- Beregning af tykkelsen af bind 2: 2 mm (forside) + 200 sider * 0,2 mm + 2 mm (bagside) = 42 mm.
+- Beregning af tykkelsen af bind 3: 2 mm (forside) + 200 sider * 0,2 mm = 40 mm.
+- Samlet afstand = 42 mm (bind 1) + 42 mm (bind 2) + 40 mm (bind 3) - 2 mm (bogorm starter på side 1) = 122 mm.
+
+Kontrol: Kontroller at tykkelsen af hver bind og omslag er korrekt med hensyn til antallet af sider.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 105:
+
+På en boghylde står et trebindsværk, hvor hvert bind er på 200 sider.
+
+En lille bogorm udklækkes i bind 1 på side 1 og gnaver sig derefter frem til side 200 i bind 3.
+
+Hver side er 0,2 mm tyk, og bøgernes omslag er 2 mm tykt. Hvor langt har den forædte bogorm bevæget sig?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>Bogormen har bevæget sig 28 millimeter.
+
+Side 1 i en bog er i højre side af bogen, når de står normalt på reolen og dermed tæt på næste bind.
+
+Dermed spiser bogormen kun siderne i bind 2, men hele 4 omslag. Hvert stykke papir i bogen svarer til to sider, så i alt spiser ormen 100 x 0,2 mm = 28 mm.</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar på 122 mm matcher ikke den officielle løsning, som angiver, at bogormen har bevæget sig 28 mm. Den officielle løsning forklarer, hvordan denne værdi er beregnet, og der er ingen indikation af, at 122 mm skulle være korrekt. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+                <section id="task-10" class="task">
+                  <h2 class="task-title">10. Opgave 378 – Del whiskyen i tre glas | Ingeniøren</h2>
+                  <div class="task-meta"><a href="https://ing.dk/artikel/del-whiskyen-i-tre-glas" target="_blank" rel="noopener noreferrer">https://ing.dk/artikel/del-whiskyen-i-tre-glas</a></div>
+                  <div class="block">
+                    <h3>Foreslået svar</h3>
+                    <div class="answer">
+                      <div class="presentation">Hver ven får 7 cl whisky.</div>
+                      <details>
+                        <summary>Vis trin og mellemregninger</summary>
+                        <pre>Forståelse: Tre venner skal dele 21 cl whisky ligeligt, så hver får 7 cl, ved hjælp af forskellige glas.
+
+Klassificering: Optimering, logik
+
+Data:
+- Total whisky: 21 cl
+- Hver ven skal have: 7 cl
+- Søren har et glas på: 11 cl
+- Erik har glas på: 8 cl og 5 cl
+- Bjørn drikker direkte fra flasken
+
+Metode: Planlægning af omhældning for at sikre, at hver ven får præcist 7 cl.
+
+Trin:
+- 1. Hæld 7 cl fra flasken til Søren's glas (11 cl).
+- 2. Hæld 7 cl fra flasken til Erik's 8 cl glas.
+- 3. Hæld 7 cl fra flasken til Bjørn direkte fra flasken.
+- 4. Kontroller at hver ven har 7 cl.
+
+Kontrol: Sammenlign mængden i hver ven's glas og flasken efter omhældning for at sikre, at hver har 7 cl.</pre>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>Opgave 378:
+
+I en flaske whisky er indholdet decimeret til 21 cl. Det vil tre venner gerne dele ligeligt, så hver får netop 7 cl.
+
+Søren har et glas på 11 cl, og Erik to glas på 8 og 5 cl – mens Bjørn regner med at drikke sin del fra flasken. Hvordan kan de klare tredelingen ved at omhælde mellem flaske og glas?</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Officiel løsning</h3>
+                    <pre>11 omhældninger af i alt 56 cl er nok til at klare tredelingen. Løsningen ser sådan ud, idet de fire talkolonner repræsenterer henholdvis whiskyflasken og de tre glas på 11, 8 og 5 cl:
+
+21 – 0 – 0 – 0 10 – 11 – 0 – 0 10 – 6 – 0 – 5 10 – 0 – 6 – 5 10 – 5 – 6 – 0 10 – 5 – 1 – 5 10 – 10 – 1 – 0 10 – 10 – 0 – 1 2 – 10 – 8 – 1 2 – 11 – 7 – 1 2 – 7 – 7 – 5 7 – 7 – 7 – 0</pre>
+                  </div>
+                  <div class="block">
+                    <h3>Evaluering</h3>
+                    <pre>Det foreslåede svar angiver, at hver ven får 7 cl whisky, men den officielle løsning beskriver en metode til at opnå en tredeling af 56 cl whisky, hvilket ikke nødvendigvis resulterer i, at hver ven får præcist 7 cl. Den officielle løsning viser, at det er muligt at fordele whisky i forskellige mængder, hvilket ikke stemmer overens med det foreslåede svar. 
+
+NO MATCH</pre>
+                  </div>
+                </section>
+                
+  </div>
+</body>
+</html>
