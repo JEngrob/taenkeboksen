@@ -143,6 +143,18 @@ def fetch_article_html(url: str) -> str:
                 return wb_html
         except Exception:
             pass
+    # Hvis vi stadig ligner en paywall eller tom artikel, gem rå HTML for debug
+    try:
+        if looks_paywalled(html):
+            from pathlib import Path as _Path
+            import hashlib
+            raw_dir = _Path(__file__).resolve().parents[1] / "reports" / "raw"
+            raw_dir.mkdir(parents=True, exist_ok=True)
+            hexd = hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+            out = raw_dir / f"paywalled_{hexd}.html"
+            out.write_text(html or "", encoding="utf-8")
+    except Exception:
+        pass
     return html
 
 

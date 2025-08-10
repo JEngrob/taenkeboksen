@@ -48,8 +48,9 @@ def main() -> None:
     parser.add_argument("--out-md", dest="out_md", default=None, help="Gem resultat som Markdown til denne sti")
     parser.add_argument("--out-html", dest="out_html", default=None, help="Gem resultat som HTML-website til denne sti (typisk reports/site/index.html)")
     parser.add_argument("--out-json", dest="out_json", default=None, help="Gem resultat som JSON til denne sti")
+    parser.add_argument("--out-csv", dest="out_csv", default=None, help="Gem et fladt CSV-udtræk til denne sti")
     parser.add_argument("--stage", dest="stage", choices=["scrape", "solve", "evaluate", "site", "all"], default="all", help="Kør kun en del: scrape|solve|evaluate|site|all")
-    parser.add_argument("--one", dest="one_index", type=int, default=None, help="Kør løsning/evaluering kun for opgave med index (1-baseret)")
+    parser.add_argument("--one", dest="one_index", type=int, default=None, help="Kør løsning/evaluering/site kun for opgave med index (1-baseret)")
     parser.add_argument("--limit", dest="limit", type=int, default=120, help="Max antal artikler at overveje fra listings")
     parser.add_argument("--max-pages", dest="max_pages", type=int, default=12, help="Max antal pagination-sider pr. listing")
     parser.add_argument("--cache", dest="cache", default=None, help="Aktivér HTTP-cache (filesystem/sqlite). Eksempel: .cache/http")
@@ -116,7 +117,15 @@ def main() -> None:
         task_no = scraper.extract_task_number_from_text(full_text)
         sol_text = sol_map.get(task_no) if task_no is not None else None
         if not sol_text:
-            continue
+            # Fallback: forsøg at finde løsning i "Bagsidens svar"-artikler
+            try:
+                all_svar = scraper.collect_bagsidens_svar_map(max_pages=12)
+                if task_no is not None and task_no in all_svar:
+                    sol_text = all_svar[task_no][1]
+            except Exception:
+                sol_text = None
+            if not sol_text:
+                continue
 
         filtered_articles.append(art)
         official_solutions.append(sol_text)
@@ -166,24 +175,42 @@ def main() -> None:
     evaluations: List[Optional[str]] = []
     if args.stage in ("evaluate", "site", "all"):
         total_eval = len(articles)
-        for idx in range(len(articles)):
-            ans = proposed_answers[idx]
-            sol = official_solutions[idx]
-            if not ans or not sol:
-                evaluations.append(None)
-                progress("Evaluate", idx + 1, total_eval)
-                continue
-            if llm_available():
-                try:
-                    evaluations.append(evaluate_answer(ans, sol))
-                except Exception as exc:
-                    logging.warning("LLM-fejl ved evaluering: %s", exc)
+        if llm_available():
+            # Paralleliser evaluering let, men bevar rækkefølge
+            from concurrent.futures import ThreadPoolExecutor, as_completed
+            results_map = {}
+            with ThreadPoolExecutor(max_workers=min(6, len(articles))) as ex:
+                futures = {}
+                for i in range(len(articles)):
+                    ans = proposed_answers[i]
+                    sol = official_solutions[i]
+                    if not ans or not sol:
+                        results_map[i] = None
+                        continue
+                    futures[ex.submit(evaluate_answer, ans, sol, None)] = i
+                done_count = 0
+                for fut in as_completed(futures):
+                    i = futures[fut]
+                    try:
+                        results_map[i] = fut.result()
+                    except Exception as exc:
+                        logging.warning("LLM-fejl ved evaluering: %s", exc)
+                        results_map[i] = None
+                    done_count += 1
+                    progress("Evaluate", done_count, total_eval)
+            progress_done()
+            evaluations = [results_map.get(i) for i in range(len(articles))]
+        else:
+            for i in range(len(articles)):
+                ans = proposed_answers[i]
+                sol = official_solutions[i]
+                if not ans or not sol:
                     evaluations.append(None)
-            else:
-                ratio = naive_compare(ans, sol)
-                evaluations.append(f"Naiv lighed: {ratio:.2f}")
-            progress("Evaluate", idx + 1, total_eval)
-        progress_done()
+                else:
+                    ratio = naive_compare(ans, sol)
+                    evaluations.append(f"Naiv lighed: {ratio:.2f}")
+                progress("Evaluate", i + 1, total_eval)
+            progress_done()
     else:
         evaluations = [None] * len(articles)
 
@@ -321,7 +348,6 @@ def main() -> None:
         def parse_verdict_and_score(text: Optional[str]) -> tuple[Optional[str], Optional[float]]:
             if not text:
                 return None, None
-            import re
             verdict = None
             if re.search(r"\bMATCH\b", text, re.IGNORECASE):
                 verdict = "MATCH"
@@ -369,6 +395,42 @@ def main() -> None:
         out_json_path.parent.mkdir(parents=True, exist_ok=True)
         out_json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         logging.info("JSON gemt: %s", out_json_path)
+
+    # CSV output
+    if args.out_csv:
+        import csv
+        out_csv_path = Path(args.out_csv)
+        out_csv_path.parent.mkdir(parents=True, exist_ok=True)
+        with out_csv_path.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                "idx", "title", "url", "number", "task_excerpt", "answer_presentation", "official_excerpt", "evaluation", "verdict", "score",
+            ])
+            for i, art in enumerate(articles):
+                excerpt = (tasks_text[i] or "").replace("\n", " ")[:800]
+                off = (official_solutions[i] or "").replace("\n", " ")[:800]
+                verdict, score = (None, None)
+                if evaluations[i]:
+                    v = None
+                    if re.search(r"\bMATCH\b", evaluations[i], re.IGNORECASE):
+                        v = "MATCH"
+                    if re.search(r"\bNO\s*MATCH\b", evaluations[i], re.IGNORECASE):
+                        v = "NO MATCH"
+                    m = re.search(r"score\s*[:=]\s*([01](?:\.\d+)?)", evaluations[i], re.IGNORECASE)
+                    verdict, score = v, (float(m.group(1)) if m else None)
+                writer.writerow([
+                    i + 1,
+                    art.title,
+                    art.url,
+                    task_numbers[i] if task_numbers[i] is not None else "",
+                    excerpt,
+                    proposed_answers[i] or "",
+                    off,
+                    evaluations[i] or "",
+                    verdict or "",
+                    (f"{score:.2f}" if score is not None else ""),
+                ])
+        logging.info("CSV gemt: %s", out_csv_path)
 
     if args.out_md:
         out_path = Path(args.out_md)

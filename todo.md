@@ -21,7 +21,7 @@ Accept: Kørsel på 10–20 artikler er stabil, hurtig og uden unødige kald.
 
 ## 2) Parsing og parring af opgave/løsning
 - [x] Udvid løsning-detektor: også “Facit”, “Svar:”, “Sådan løses…”
-- [ ] Kombinér “i+1”-heuristik med `bagsidens svar`-opslag pr. opgavenummer
+- [x] Kombinér “i+1”-heuristik med `bagsidens svar`-opslag pr. opgavenummer (fallback)
 - [ ] Bedre rensning af brødtekst; fjern nav/footer/relaterede links
 - [x] AMP/Wayback-normalisering; behold original URL i metadata
 
@@ -30,8 +30,8 @@ Accept: ≥90% korrekt parring på et prøveudsæt; manuel spotcheck OK.
 ## 3) LLM – pålidelighed og evaluering
 - [x] Håndhæv JSON-respons (hvor modellen understøtter det)
 - [x] Robust JSON-parsing (tåler fenced code og ekstra tekst)
-- [ ] CLI `--model` + fallback-kæde; håndter 429 med backoff
-- [ ] Parallel `solve`/`evaluate` (rate-limited)
+- [x] CLI `--model` + fallback-kæde; håndter fejlforsøg med backoff
+- [x] Parallel `evaluate` (rate-limited via workers)
 - [x] Evaluator returnerer kort tekst + MATCH/NO MATCH + numerisk score
 
 Accept: ≥95% vellykket parse; evaluatorens dom er stabil ved gentagelser.
@@ -41,15 +41,15 @@ Accept: ≥95% vellykket parse; evaluatorens dom er stabil ved gentagelser.
 - [x] Udvid JSON-output: titel, URL, nr., struktureret svar, evaluering, tidsstempler
 - [ ] Flyt HTML til templating (fx Jinja2)
 - [ ] Tilføj søgning/filtrering i site (simpel JS)
-- [ ] CSV-eksport for flad analyse
+- [x] CSV-eksport for flad analyse
 
 Accept: JSON/HTML/CSV er konsistente og dokumenterede.
 
 ## 5) CLI og UX
-- [x] Flags: `--limit`, `--since`, `--max-pages`, `--cache`, `--cache-backend`, `--cache-expire`, `--model`, `--rate-limit`, `--workers`, `--log-level`, `--timeout`
+- [x] Flags: `--limit`, `--since`, `--max-pages`, `--cache`, `--cache-backend`, `--cache-expire`, `--model`, `--rate-limit`, `--workers`, `--log-level`, `--timeout`, `--out-csv`
 - [ ] Progress/logging med `rich`/`tqdm`
 - [ ] Forbedr `bagside`: Enter=default run, Ctrl-C håndtering, husk sidste valg
-- [ ] `--one` virker også for `evaluate` og `site`
+- [x] `--one` virker også for `evaluate` og `site`
 
 Accept: Hurtig fejlfinding; tydelig feedback; bedre first-run-oplevelse.
 
@@ -77,8 +77,9 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 - [x] 2. Robust LLM-JSON + evaluatorscore
 - [x] 3. Udvidet JSON-output + dataklasser
 - [x] 4. Caching + rate limiting (opt-in cache; default filesystem-backend)
+- [x] 5. Forbedringer: CLI-flags, løsning-detektor, fallback-parring, CSV, parallel evaluate
 
 ## Seneste status
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
-- 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor.
+- 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor; fallback-parring; CSV; parallel evaluate.

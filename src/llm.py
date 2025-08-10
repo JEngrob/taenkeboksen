@@ -32,28 +32,42 @@ def solve_task(problem_text: str, model: Optional[str] = None) -> Optional[str]:
         return None
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    model_name = model or os.getenv("OPENAI_MODEL", "gpt-5")
+    primary = (model or os.getenv("OPENAI_MODEL") or "gpt-5").strip()
+    fallbacks_env = os.getenv("OPENAI_MODEL_FALLBACK", "gpt-4o-mini,gpt-4o").strip()
+    model_candidates = [m.strip() for m in ([primary] + fallbacks_env.split(",")) if m.strip()]
     system_prompt = _load_prompt("solver")
 
-    # GPT-5: brug standard temperatur (nogle konfigurationer tillader kun default)
-    try:
-        resp = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": problem_text[:8000]},
-            ],
-            response_format={"type": "json_object"},
-        )
-    except Exception:
-        resp = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": problem_text[:8000]},
-            ],
-        )
-    return (resp.choices[0].message.content or "").strip()
+    last_err: Optional[Exception] = None
+    for mdl in model_candidates:
+        for attempt in range(3):
+            try:
+                resp = client.chat.completions.create(
+                    model=mdl,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": problem_text[:8000]},
+                    ],
+                    response_format={"type": "json_object"},
+                )
+                return (resp.choices[0].message.content or "").strip()
+            except Exception as e:
+                last_err = e
+                import time
+                time.sleep(0.5 * (2 ** attempt))
+        # fallback uden tvunget json-format
+        try:
+            resp = client.chat.completions.create(
+                model=mdl,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": problem_text[:8000]},
+                ],
+            )
+            return (resp.choices[0].message.content or "").strip()
+        except Exception as e:
+            last_err = e
+            continue
+    raise last_err if last_err else RuntimeError("LLM kunne ikke levere svar")
 
 
 def parse_solver_json(text: Optional[str]) -> Optional[Dict[str, Any]]:
@@ -63,7 +77,7 @@ def parse_solver_json(text: Optional[str]) -> Optional[Dict[str, Any]]:
     import re
     s = text.strip()
     # Fjern fenced blokke hvis hele indholdet er i ``` ... ```
-    if s.startswith("```") and s.endswith("````"):
+    if s.startswith("```") and s.endswith("```"):
         s = re.sub(r"^```(?:json)?\s*|\s*```$", "", s, flags=re.IGNORECASE | re.DOTALL).strip()
     # Scan efter første balancerede {...}
     depth = 0
@@ -95,7 +109,9 @@ def evaluate_answer(user_answer: str, official_solution: str, model: Optional[st
         return None
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    model_name = model or os.getenv("OPENAI_MODEL", "gpt-5")
+    primary = (model or os.getenv("OPENAI_MODEL") or "gpt-5").strip()
+    fallbacks_env = os.getenv("OPENAI_MODEL_FALLBACK", "gpt-4o-mini,gpt-4o").strip()
+    model_candidates = [m.strip() for m in ([primary] + fallbacks_env.split(",")) if m.strip()]
     system_prompt = _load_prompt("evaluator")
 
     content = (
@@ -104,15 +120,23 @@ def evaluate_answer(user_answer: str, official_solution: str, model: Optional[st
         "Vurdér kort om svaret matcher løsningen, og giv en kort begrundelse."
     )
 
-    resp = client.chat.completions.create(
-        model=model_name,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": content[:8000]},
-        ],
-        # undlad at sætte temperatur eksplicit
-    )
-    return (resp.choices[0].message.content or "").strip()
+    last_err: Optional[Exception] = None
+    for mdl in model_candidates:
+        for attempt in range(3):
+            try:
+                resp = client.chat.completions.create(
+                    model=mdl,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": content[:8000]},
+                    ],
+                )
+                return (resp.choices[0].message.content or "").strip()
+            except Exception as e:
+                last_err = e
+                import time
+                time.sleep(0.5 * (2 ** attempt))
+    raise last_err if last_err else RuntimeError("LLM evalueringskald fejlede")
 
 
 

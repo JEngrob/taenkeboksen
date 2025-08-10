@@ -22,6 +22,7 @@ Opret eller rediger `.env` i projektroden:
 OPENAI_API_KEY=sk-...
 # Valgfrit
 # OPENAI_MODEL=gpt-4o-mini
+# OPENAI_MODEL_FALLBACK=gpt-4o-mini,gpt-4o
 ```
 
 ### Kørsel
@@ -37,6 +38,15 @@ python -m src.main
 
 # Gem som Markdown
 python -m src.main --out-md reports/latest.md
+
+# Gem som CSV
+python -m src.main --out-csv reports/latest.csv
+
+# Hastighed og stabilitet (eksempler)
+python -m src.main --limit 100 --max-pages 12 --timeout 25 --workers 6 --rate-limit 300
+
+# HTTP-cache (opt-in)
+python -m src.main --cache .cache/http --cache-backend filesystem --cache-expire 86400
 ```
 
 ### Hurtig start med menu

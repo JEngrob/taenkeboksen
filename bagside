@@ -28,7 +28,8 @@ while true; do
   echo "4) Site (byg HTML-rapport)"
   echo "5) All (scrape + solve + evaluate + site)"
   echo "6) Solve one (vælg index 1-10)"
-  echo "7) Exit"
+  echo "7) All + CSV (inkl. reports/latest.csv)"
+  echo "8) Exit"
   read -rp "> " choice
   case "$choice" in
     1)
@@ -53,10 +54,14 @@ while true; do
       python -m src.main --stage solve --one "$idx"
       ;;
     7)
+      python -m src.main --stage all --out-json "$OUT_JSON" --out-html "$OUT_HTML" --out-csv reports/latest.csv
+      echo "Færdig. HTML: $OUT_HTML, CSV: reports/latest.csv"
+      ;;
+    8)
       exit 0
       ;;
     *)
-      echo "Vælg et tal 1-7"
+      echo "Vælg et tal 1-8"
       ;;
   esac
 done

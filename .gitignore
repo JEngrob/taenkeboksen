@@ -119,4 +119,10 @@ dmypy.json
 .vscode/
 .idea/
 
+## Project artifacts
+reports/site/
+reports/latest.md
+reports/latest.json
+reports/latest.csv
+reports/raw/
 
