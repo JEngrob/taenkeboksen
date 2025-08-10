@@ -72,8 +72,20 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 
 ---
 
+## 8) Iteration 2 – Refaktorering og UX-forbedringer
+- [ ] Modulér pipeline (scrape/solve/evaluate/render) i `src/pipeline.py`
+- [x] CLI: `--target-count` for antal opgaver (erstatter hardcoded 10)
+- [x] HTML: badges (MATCH/NO MATCH) og collapsible sektioner; udtræk CSS til fil
+- [x] HTTP-cache: kun serialisering ved sqlite-backend, bevar parallelisering ved filesystem
+- [x] CLI: `--quiet`, `--no-color`, `--log-file`
+- [ ] LLM: lokal cache pr. opgave-hash (opt-in `--llm-cache-dir`)
+- [ ] Tests: flere HTML-fixtures og parser-tests; responses-mocking for end-to-end
+
+Accept: Bedre struktur, tydeligere UI, konfigurerbarhed uden at miste hastighed.
+
 ## Seneste status
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
 - 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor; fallback-parring; CSV; parallel evaluate.
 - 2025-08-10: Skift til pyproject + console script; pre-commit tilføjet; Jinja2 templating + søgefelt i site; rich progress; støjfiltre udvidet; CI+nightly; Dockerfile/devcontainer; `.env.example`; CONTRIBUTING.
+- 2025-08-10: Iteration 2: tilføjet `--target-count`, badges + CSS-udtræk, cache-lås refined, `--quiet`/`--no-color`/`--log-file`.

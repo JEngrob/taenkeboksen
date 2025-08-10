@@ -62,13 +62,17 @@ def main() -> None:
     parser.add_argument("--workers", dest="workers", type=int, default=6, help="Antal parallelle hentere for artikler")
     parser.add_argument("--model", dest="model", default=None, help="Overstyr OPENAI_MODEL for denne kørsel")
     parser.add_argument("--log-level", dest="log_level", default="INFO", help="Log-niveau (DEBUG, INFO, WARNING, ERROR)")
+    parser.add_argument("--quiet", dest="quiet", action="store_true", help="Undertryk non-kritiske logs")
+    parser.add_argument("--no-color", dest="no_color", action="store_true", help="Deaktivér farver i output")
+    parser.add_argument("--log-file", dest="log_file", default=None, help="Skriv log til denne fil")
+    parser.add_argument("--llm-cache-dir", dest="llm_cache_dir", default=None, help="Cache-mappe til LLM-svar")
     args = parser.parse_args()
 
     progress_bar = None
     def progress(prefix: str, i: int, n: int) -> None:
         nonlocal progress_bar
         if progress_bar is None:
-            progress_bar = Progress()
+            progress_bar = Progress() if not args.no_color else Progress(transient=True)
             progress_bar.start()
             progress_bar.add_task(prefix, total=n)
         task_id = progress_bar.task_ids[0]
@@ -82,6 +86,13 @@ def main() -> None:
 
     # Konfigurer logniveau
     logging.getLogger().setLevel(getattr(logging, args.log_level.upper(), logging.INFO))
+    if args.quiet:
+        logging.getLogger().setLevel(logging.ERROR)
+    if args.log_file:
+        fh = logging.FileHandler(args.log_file, encoding="utf-8")
+        fh.setLevel(logging.getLogger().level)
+        fh.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+        logging.getLogger().addHandler(fh)
 
     # Konfigurer scraper
     scraper.configure(
@@ -93,7 +104,7 @@ def main() -> None:
         max_workers=args.workers,
     )
 
-    target_count = 10
+    target_count = 25
     logging.info("Finder %s reelle opgaver med løsning …", target_count)
     # Hent mange Tænkeboksen-artikler (nyeste først)
     raw_articles = scraper.get_latest_taenkeboksen_articles(limit=args.limit, max_pages=args.max_pages, max_workers=args.workers)
@@ -165,7 +176,7 @@ def main() -> None:
             done = 0
             for i in run_range:
                 try:
-                    raw = solve_task(tasks_text[i], model=args.model)
+                    raw = solve_task(tasks_text[i], model=args.model, cache_dir=args.llm_cache_dir)
                     data = parse_solver_json(raw)
                     if data:
                         structured_solutions[i] = data
@@ -224,12 +235,12 @@ def main() -> None:
         evaluations = [None] * len(articles)
 
     # Rapportér til terminal og evt. Markdown
-    print("\n===== Tænkeboksen: 10 opgaver med løsninger =====\n")
+    print(f"\n===== Tænkeboksen: {len(articles)} opgaver med løsninger =====\n")
 
     md_lines: List[str] = []
     html_sections: List[str] = []
     if args.out_md:
-        md_lines.append(f"# Tænkeboksen – 10 opgaver med løsninger")
+        md_lines.append(f"# Tænkeboksen – Opgaver med løsninger")
         md_lines.append("")
         md_lines.append(f"Genereret: {datetime.now().isoformat(timespec='seconds')}")
         md_lines.append("")

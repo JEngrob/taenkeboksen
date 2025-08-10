@@ -1,19 +1,19 @@
 {
-  "generated_at_iso": "2025-08-10T08:24:46",
+  "generated_at_iso": "2025-08-10T09:31:17",
   "items": [
     {
       "task": {
-        "title": "Mål et reb med abens mors alder | Ingeniøren",
-        "url": "https://ing.dk/artikel/maal-et-reb-med-abens-mors-alder",
-        "number": 104,
-        "text": "Opgave 104:\n\nEt reb hænger i en talje. Et lod er bundet i rebets ene ende, mens en abe hænger i den anden. Rebet er lige langt i begge sider, og der er ligevægt.\n\nRebet vejer 250 g pr. meter. Aben og dens mor er tilsammen fire år gamle, og aben vejer lige så mange kg som morens alder er i år.\n\nSå kommer det svære: Abens mor er dobbelt så gammel, som aben var, da dens mor var halvt så gammel, som aben vil være, når den er tre gange så gammel, som  dens mor var, da hun var tre gange så gammel som aben.\n\nVægten af hele rebet plus loddet i enden er halvanden gang så meget som forskellem mellem loddets vægt og loddets og abens vægt.\n\nHvor langt er rebet?"
+        "title": "Mål et skævt kvadrat | Ingeniøren",
+        "url": "https://ing.dk/artikel/maal-et-skaevt-kvadrat-0",
+        "number": 395,
+        "text": "Opgave 395:\n\nTre parallelle linjer ligger med afstandene 5 og 7.\n\nPå de tre linjer ligger punkterne A, B og C, som sammen med D udgør hjørnerne i et kvadrat.\n\nHvad er arealet af dette kvadrat?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Rebet er 5 meter langt. Løsningen involverer i alt 14 ligninger, som heldigvis er ganske simple at løse. Husk, at når abens mor bliver et antal år ældre, så gør aben det naturligvis også.\n\nDet fører (efter nogle mellemregninger) til, at aben nu er halvandet år gammel, mens dens mor er to et halvt år. Så vejer aben 2,5 kg, og rebet det halve (ifølge den kryptiske formulering i opgavens sidste afsnit). Dermed er det 5 meter langt."
+        "text": "Det ‘skæve’ kvadrat har arealet 74. For at finde den løsning tegner vi først en hjælpelinje gennem hjørnet B og vinkelret på de tre parallelle linjer. Derved opstår to lige store, retvinklede trekanter uden for kvadratet, og de har begge kvadratets side s som hypotenuse og kateterne 5 og 7.\n\nAltså gælder s2 = 52 = 74, hvilket netop er kvadratets areal."
       },
       "evaluation": {
         "text": null,
@@ -43,6 +43,86 @@
     },
     {
       "task": {
+        "title": "Spis med en bogorm | Ingeniøren",
+        "url": "https://ing.dk/artikel/spis-med-en-bogorm",
+        "number": 105,
+        "text": "Opgave 105:\n\nPå en boghylde står et trebindsværk, hvor hvert bind er på 200 sider.\n\nEn lille bogorm udklækkes i bind 1 på side 1 og gnaver sig derefter frem til side 200 i bind 3.\n\nHver side er 0,2 mm tyk, og bøgernes omslag er 2 mm tykt. Hvor langt har den forædte bogorm bevæget sig?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Bogormen har bevæget sig 28 millimeter.\n\nSide 1 i en bog er i højre side af bogen, når de står normalt på reolen og dermed tæt på næste bind.\n\nDermed spiser bogormen kun siderne i bind 2, men hele 4 omslag. Hvert stykke papir i bogen svarer til to sider, så i alt spiser ormen 100 x 0,2 mm = 28 mm."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Del whiskyen i tre glas | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-whiskyen-i-tre-glas",
+        "number": 378,
+        "text": "Opgave 378:\n\nI en flaske whisky er indholdet decimeret til 21 cl. Det vil tre venner gerne dele ligeligt, så hver får netop 7 cl.\n\nSøren har et glas på 11 cl, og Erik to glas på 8 og 5 cl – mens Bjørn regner med at drikke sin del fra flasken. Hvordan kan de klare tredelingen ved at omhælde mellem flaske og glas?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "11 omhældninger af i alt 56 cl er nok til at klare tredelingen. Løsningen ser sådan ud, idet de fire talkolonner repræsenterer henholdvis whiskyflasken og de tre glas på 11, 8 og 5 cl:\n\n21 – 0 – 0 – 0 10 – 11 – 0 – 0 10 – 6 – 0 – 5 10 – 0 – 6 – 5 10 – 5 – 6 – 0 10 – 5 – 1 – 5 10 – 10 – 1 – 0 10 – 10 – 0 – 1 2 – 10 – 8 – 1 2 – 11 – 7 – 1 2 – 7 – 7 – 5 7 – 7 – 7 – 0"
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Skyd genvej til Harvard | Ingeniøren",
+        "url": "https://ing.dk/artikel/skyd-genvej-til-harvard",
+        "number": 210,
+        "text": "Opgave 210:\n\nOversat til dansk kan vi her bringe en del af adgangs­eksamen til Harvard University, så nu kan du få lejlighed til at prøve kræfter med amerikansk tankegang.\n\nA) 29 b. i a. B) V. 7 v. C) 1001 n. e. D) De 12 a. h. E) 52 k. i et s. k. F) 9 p. i s.s. G) 88 t. på et f. H) 4 r. f. på det d. f. I) 100 g. er v. k.p. J) 18 h. på en g.b. K) 90 g. i en r. v. L) 2000 k. for at p. s. i M. M) 3 s. på en a.t. N) 144 s. på en g. O) 4 k. på en h. P) 24 t. på et d. Q) 1 h. på en e. R) 4 c. i et p.n. S) 7 f. f. af K. B. T) 11 s. på et f.h. U) 2 f. i det d.f. V) 29 d. i f. ved s.å. W) 60 s. på et m. X) 40 d. og n. i den s. s.f. Y) 7 d. på en u. Z) 3 s. g. Æ) 7 b. og t. på en n.p. Ø) 6 s. i en h. Å) 30 f. f. og u. i G. D."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "A) 29 bogstaver i alfabetet\n\nB) Verdens 7 vidundere\n\nC) 1.001 nats eventyr\n\nD) De 12 astrologiske himmeltegn\n\nE) 52 kortblade i et spil kort\n\nF) 9 planeter i solsystemet\n\nG) 88 tangenter på et flygel\n\nH) 4 røde firkanter på det danske flag\n\nI) 100 grader er vands kogepunkt\n\nJ) 18 huller på en golfbane\n\nK) 90 grader i en ret vinkel\n\nL) 2.000 kr. for at passere start i Matador\n\nM) 3 sider på en advarsels­tavle\n\nN) 144 styk på en gros\n\nO) 4 kvarte på en hel\n\nP) 24 timer på et døgn\n\nQ) 1 horn på en enhjørning\n\nR) 4 cifre i et postnummer\n\nS) 7 fantastiske fortællinger af Karen Blixen\n\nT) 11 spillere på et fodboldhold\n\nU) 2 farver i det danske flag\n\nV) 29 dage i februar ved skudår\n\nW) 60 sekunder på et minut\n\nX) 40 dage og nætter i den store syndflod\n\nY) 7 dage på en uge\n\nZ) 3 små grise\n\nÆ) 7 bogstaver og tal på en nummerplade\n\nØ) 6 sider i en hexagon\n\nÅ) 30 forskellige frugter og urter i en Gammel Dansk."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Et sandsynligt mord | Ingeniøren",
+        "url": "https://ing.dk/artikel/et-sandsynligt-mord",
+        "number": 237,
+        "text": "Opgave 237:\n\nPå slottet Finsterburg er sket et mord, og de fire ­mistænkte er en dansker, en svensker, en finne og en nordmand. De fire er af profession advokat, ejendomsmægler, ingeniør og officer. Inspektør Mörser finder ud af, at der er 30% sandsynlighed for, at morderen er advokat, og 70% for at han er ejendomsmægler.\n\nDe fire mistænkte vil ikke sige noget om deres profession, så her må inspektøren også have fat i sandsynlighederne. Ingeniøren er med 20% sandsynlighed dansker, og nordmanden er med 88% sandsynlighed ikke ejendomsmægler.\n\nEjendomsmægleren er med 24% sandsynlighed dansker eller nordmand. Finnen er med 84% sandsynlighed ikke ejendomsmægler. Ingeniøren er med 52% sandsynlighed svensker eller finne. Svenskeren er med 72% sandsynlighed officer eller ejendomsmægler.\n\nOfficeren er med 72% sandsynlighed ikke dansker. Endelig er finnen med 56% sandsynlighed ikke ingeniør, mens advokaten med 28% sandsynlighed er finne.\n\nHvilken nationalitet har den mest sandsynlige morder?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Den mest sandsynlige morder er svenskeren, som med 48 procents sandsynlighed har udført mordet. ­Næstmest sandsynlige morder er danskeren med 20,4 procent, mens finnen scorer 19,4 procent og nordmanden kun 12 procent.\n\nResultatet fås, ved at vi ganger de betingede sandsynligheder sammen. Som mellemresultater har vi for eksempel, at danskeren med 40 procents sandsynlighed er advokat, og at svenskeren med 50 procent sandsynlighed er ejendomsmægler."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
         "title": "Tæl de forskellige knus | Ingeniøren",
         "url": "https://ing.dk/artikel/tael-de-forskellige-knus",
         "number": 151,
@@ -54,6 +134,26 @@
       },
       "official": {
         "text": "Claus’ kæreste har knuset fire personer (og det er sjovt nok de samme, som Claus har knuset).\n\nIngen har knuset mere end 8 personer, altså har de 9 personer ud over Claus hver knuset 0 til 8 personer – og vi kalder dem P0, P1, ..., P8, efter hvor mange de har knuset.\n\nP8 har knuset P1-P7 samt Claus. Så er P0 og P8 partnere, og P1 har brugt sin kvote. P7 har knuset P2-P6 samt P8 og Claus, så nu har P2 brugt sin kvote, og P1 og P7 er partnere.\n\nFortsætter vi på den måde, bliver parrene P2 og P6, P3 og P5 samt P4 og Claus."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Få kontakt mellem lamperne | Ingeniøren",
+        "url": "https://ing.dk/artikel/faa-kontakt-mellem-lamperne",
+        "number": 318,
+        "text": "Opgave 318:\n\nLars befinder sig i et hus, hvor der er tre ens lamper på første sal. Kontakterne til de tre lamper sidder imidlertid nede i kælderen., og Lars vil gerne finde ud af, hvilken kontakt der tænder præcis hvilken lampe.\n\nMen han er alene i huset og gider kun gå én gang op i soveværelset. Ledningerne er skjulte, og han kan ikke se lamperne fra kælderen. Han må heller ikke trække ekstra ledninger, bruge værktøj eller andet snyderi. Hvordan kan Lars løse den opgave?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Først tænder man en af kontakterne i kælderen og venter et stykke tid. Så slukker man kontakten igen og tænder en af de andre, hvorefter man straks går op på 1. sal.\n\nDen pære, som er slukket men varm, hører til den første kontakt. Den tændte pære hører naturligvis til den tændte kontakt, og den slukkede og kolde pære hører til den sidste og urørte kontakt."
       },
       "evaluation": {
         "text": null,
@@ -83,17 +183,17 @@
     },
     {
       "task": {
-        "title": "Saml et gulvtæppe | Ingeniøren",
-        "url": "https://ing.dk/artikel/saml-et-gulvtaeppe",
-        "number": 323,
-        "text": "Opgave 323:\n\nEn tæppehandler har to tæpper, et på 1 gange 8 meter og et på 10 gange 10 meter. De skal dække et gulv, som er 9 gange 12 meter, og det er jo i sig selv ikke særlig svært.\n\nDet svære er, at man kun må skære et eneste snit i et af de to tæpper. Derefter skal de nu tre stykker passe til gulvet. Hvordan gør man det?"
+        "title": "Del 13 volt med seks modstande | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-13-volt-med-seks-modstande",
+        "number": 264,
+        "text": "Opgave 264:\n\nMax fandt et gammelt kredsløb med to ledninger ind og to ud. Når der er 13 V på indgangen, er der netop 1 V (ubelastet) på udgangen.\n\nDesværre var kredsløbet brændt sammen, så Max kunne ikke se, hvordan modstandene var forbundet. Men der var seks modstande på hver 10 Ohm, og de var ikke så store, så det gælder om at finde det kredsløb, hvor modstandene belastes mindst."
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Tæppeopgaven kræver godt nok et langt og besværligt snit, der næppe ville være brugbart i virkelighedens verden. Men i vores trygge og begrænsede matematiske omgivelser er der ingen tvivl: Bare del tæppet på 10 gange 10 meter i to ens dele som vist på tegningen.\n\nSå kan det sorte stykke forskydes et ‘trappetrin’ til højre og nedad, hvorved et hul på 1 gange 8 meter dukker op i midten – lige netop hvad det lille tæppe kan udfylde. Og gulvet på 9 gange 12 meter dækkes som krævet."
+        "text": "Mindst mulige belastning af mostandene er 2,5 W – og i det bedste kredsløb på tegningen er det naturligvis de to modstande ved indgangen, som belastes mest."
       },
       "evaluation": {
         "text": null,
@@ -103,17 +203,17 @@
     },
     {
       "task": {
-        "title": "Betal med Haha, Aha og Ah | Ingeniøren",
-        "url": "https://ing.dk/artikel/betal-med-haha-aha-og-ah",
-        "number": 113,
-        "text": "Opgave 113:\n\nI landet Primtalien har man kun tre mønter med navnene Haha, Aha og Ha. Deres værdi er 5, 7 og 13. Det er klart, at småbeløbene 1, 2, 3 og 4 ikke kan betales i Primtalien. Men hvad er det største beløb, man ikke kan betale med de tre mønter?"
+        "title": "Beregn Børges baghave | Ingeniøren",
+        "url": "https://ing.dk/artikel/beregn-boerges-baghave",
+        "number": 280,
+        "text": "Opgave 280:\n\nBørge ­opdagede, at hans grund kan inddeles fuldstændigt i 13 kvadrater som vist på tegningen. Det mindste, sorte kvadrat er netop 1 kvadratmeter. Hvor stor er så hele Børges grund?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Beløbet 16 er det største, man ikke kan betale i Primtalien. De andre umulige beløb er 1, 2, 3, 4, 6, 8, 9 og 11.\n\nEfter 16 kan både 17, 18, 19, 20 og 21 lade sig gøre – og alle større beløb kan også klares ved at lægge flere femmere til."
+        "text": "Børges grund er 933 ⅓ kvadratmeter stor. Den løsning findes ved at kalde et par kvadratsider x og y og derefter successivt opstille alle sammenhængene mellem kvadraternes sidelængder. På den måde ender man med to ligninger med to ubekendte.\n\nVælger vi for eksempel de to kvadrater lige til højre for den sorte firkant og kalder deres sider for x og y, så kan vi bevæge os rundt i Børges have nedefter og mod venstre og får udtrykt sidelængden af det midterste kvadrat foroven som 3x-y+6. Ergo har vi ligningen 3x-y+6 = x+y.\n\nPå tilsvarende vis kan vi bevæge os nedad fra midten af haven og rundt til højre, hvorved vi får 26x-15y+15 = x+y. Når de to ligninger er løst, finder vi grundens sidelængder til 25 meter og 37 ⅓ meter og deraf arealet."
       },
       "evaluation": {
         "text": null,
@@ -143,17 +243,57 @@
     },
     {
       "task": {
-        "title": "Byg en plankebro | Ingeniøren",
-        "url": "https://ing.dk/artikel/byg-en-plankebro",
-        "number": 281,
-        "text": "Opgave 281:\n\nI denne opgave gælder det om at komme over en 1,6 meter bred grøft ved hjælp af smalle planker på 1,5 meters længde, når det ikke er tilladt at bruge andet end plankerne. Hvor få planker kan man klare sig med?"
+        "title": "Saml din egen fodbold | Ingeniøren",
+        "url": "https://ing.dk/artikel/saml-din-egen-fodbold",
+        "number": 356,
+        "text": "Opgave 356:\n\nMan kan dække en kugle med regulære femkanter og sekskanter, som samles, så de mødes tre og tre i hvert hjørne (og hverken overlapper eller har huller). Det er for eksempel sådan, en almindelig læderfodbold er lavet.\n\nHvor mange femkanter skal der bruges?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Man kan komme over grøften med kun tre af de for korte planker. For eksempel sådan som tegningen viser.\n\nMan kan selvfølgelig klare sig med to planker, hvis man snyder, og grøften ikke er alt for dyb. Lad simpelthen en planke gå fra den ene bred og ned til bunden af grøften. Så kan den anden planke nå fra den modsatte bred og over til den første planke.\n\nOg har man en ven til at holde den ene ende af planken, kan man sågar nøjes med én. Men det er også snyd.\n\nSe flere Tænkeboks-opgaver her"
+        "text": "Når man skal dække en kugle med regulære fem- og sekskanter, skal man altid bruge netop 12 femkanter. Det gælder sjovt nok uanset kuglens størrelse (og dermed antallet af sekskanter).\n\nFor at løse opgaven skal vi bruge Eulers regel: flader + hjørner = kanter + 2.\n\nHvis vi bruger f femkanter og s sekskanter, bliver antal flader f+s, og antal hjørner er (5f+6s)/3, idet netop tre af ‘5/6-kanterne’ skal mødes i hvert hjørne. Antal kanter er (5f+6s)/2. Eulers regel siger da f + s + (5f+6s)/3 = (5f+6s)/2 + 2 ­eller 8f/3 + 3s = 5f/2 + 3s + 2, hvoraf F = 12."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Find kaptajnens navn | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-kaptajnens-navn",
+        "number": 20,
+        "text": "Opgave 20:\n\nTre passagerer på et skib hedder Jørgensen, Hansen og Nielsen. Det samme gør tre besætningsmedlemmer."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Kaptajnen hedder Jørgensen.\n\nVi starter med at se på linedanseren, som må bo i Farum. Da passager Nielsen bor i Kerteminde, og Hansen lider af svimmelhed, må linedanseren hedde Jørgensen. Så må passager Hansen bo i Horsens, og styrmanden hedde Hansen.\n\nDa maskinmesteren ikke hedder Jørgensen, må det være kaptajnens navn."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Sig tillykke til Lis | Ingeniøren",
+        "url": "https://ing.dk/artikel/sig-tillykke-til-lis",
+        "number": 325,
+        "text": "Opgave 325:\n\nDet var en råkold vinterdag i 1990’erne, da Lis kom på besøg hos tante Erna. Talen faldt naturligt på deres respektive runde fødselsdage, og Erna bad Lis tage halvdelen af Ernas lagkagelysestager fra festen i januar, når Lis skulle fejres i næste uge.\n\n»Tak,« sagde Lis, der er ingeniør. »Når jeg tænder dem, er jeg præcis halvt så mange dage gammel som du.«\n\nDu tror ikke, der er oplysninger nok, men alligevel lyder spørgsmålet: Hvilket år er Lis født?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Lis er født i 1948, nærmere bestemt den 2. februar. Og Erna er født 31. januar 1898. Den 2. februar 1998 har Erna dermed levet 36526 dage, præcis det dobbelte af Lis’ 18263 dage.\n\nDet særlige ved opgaven er, at der skal være en forskel på flere dage mellem Ernas alder i dage og det dobbelte af Lis’ alder. Det kræver, at Erna er født før år 1900, som jo ikke er et skudår, for så kan der være en forskel på to dage.\n\nBegge fejrer rund fødselsdag, og da 120 år er meren end nogen nulevende dansker er nået op på, må det være 100 år for Erna og 50 år for Lis.\n\nLis’ besøg finder sted i februar, mens Erna fejrede fødselsdag i januar. Samtidig siger de »næste uge« om Lis’ runde dag. Derfor må Erna have fødselsdag 31. januar og Lis den 2. februar, og 1. februar må være en søndag, så 2. februar ligger i næste uge.\n\nEneste år i 1990’erne med 1. februar på en søndag var 1998, så det er året, vi taler om."
       },
       "evaluation": {
         "text": null,
@@ -183,17 +323,77 @@
     },
     {
       "task": {
-        "title": "Find kaptajnens navn | Ingeniøren",
-        "url": "https://ing.dk/artikel/find-kaptajnens-navn",
-        "number": 20,
-        "text": "Opgave 20:\n\nTre passagerer på et skib hedder Jørgensen, Hansen og Nielsen. Det samme gør tre besætningsmedlemmer."
+        "title": "Tæl til 12 med regnestykker | Ingeniøren",
+        "url": "https://ing.dk/artikel/tael-til-12-med-regnestykker",
+        "number": 224,
+        "text": "Opgave 224:\n\nHer er et smart regnestykke, hvor hvert bogstav står for et ciffer, positivt eller negativt (altså mellem -9 og 9). Ingen af bogstaverne står for det samme ciffer."
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Kaptajnen hedder Jørgensen.\n\nVi starter med at se på linedanseren, som må bo i Farum. Da passager Nielsen bor i Kerteminde, og Hansen lider af svimmelhed, må linedanseren hedde Jørgensen. Så må passager Hansen bo i Horsens, og styrmanden hedde Hansen.\n\nDa maskinmesteren ikke hedder Jørgensen, må det være kaptajnens navn."
+        "text": "Y=-9, R=-8, Ø=-7, M=-5, J=-3, A=-2, N=-1, T=0, E=1, O=2, V=3, I=4, D=5, L=6, S=7 og F=8."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Del en trekant | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-en-trekant",
+        "number": 110,
+        "text": "Opgave 110:\n\nDe to trekanter har samme højde og grundlinje.\n\nHvordan kan man med to lige snit dele den ene trekant i tre stykker, som kan lægges sammen til den anden trekant – når ­papiret ikke må vendes om?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Lægger vi de to trekanter over hinanden, ses det let, hvordan den ene kan skæres i tre stykker, som kan lægges sammen til den anden."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Hvordan kom ministrene frem? | Ingeniøren",
+        "url": "https://ing.dk/artikel/hvordan-kom-ministrene-frem",
+        "number": 288,
+        "text": "Opgave 288:\n\nFire ministre var ­inviteret til fortrolig samtale med statsministeren et hemmeligt sted ude i byen. De havde kun én tandemcykel og én kørselsvejledning til fælles rådighed og skulle alle være på mødestedet i løbet af to timer.\n\nDe, som kørte på cyklen, skulle altid have vejldningen med, og hver for sig var de fire ministre 10, 20, 40 og 50 minutter om at cykle ruten (uanset om der var én eller to på cyklen – var der to gælder den langsomste tid!).\n\nVi præciserer, at de fire ministre naturligvis befandt sig samme sted, inden turene til mødet. Og så spørger vi bare: Hvordan klarede ministrene at komme frem i tide?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "De fire ministre kommer let frem til statsministeren i tide, hvis de blot sørger for, at de to langsomste ministre kun skal køre én gang – og sammen. Løsningen bliver derfor, at de to hurtigste kører af sted, og den ene kommer tilbage.\n\nDerefter kører de to langsomste af sted, og den anden hurtige tager cyklen ­tilbage. Og så kan de to hurtigste blot tage turen til statsministeren igen. Samlet tid: 20+10+50+20+20 minutter eller netop to timer."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Bestem professorernes alder | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-bestem-professorernes-alder",
+        "number": 196,
+        "text": "Opgave 196:\n\nSeks professorer sidder om frokostbordet og diskuterer alder. Ingen af dem har samme alder, og de er alle mellem 20 og 70 år gamle.\n\nProfessorerne har et mærkeligt forhold til sandheden. Dem over 40 taler sandt, undtagen hvis deres alder er delelig med 17. Omvendt lyver alle professorerne under 40, bortset fra dem hvis alder er delelig med 13.\n\nHør nu, hvad de siger. Jørgensen: »Watson er ældre end mig«. Frandsen: »Jørgensen er 30 år yngre end Morrison«. Morrison: »Jeg er 51 år gammel«. Schwartz: »Morrison er 52 år. Jeg er ikke 29 år«. Watson: »Jørgensen lyver. Gregersen er 61«. Gregersen: »Schwartz tager fejl. Frandsen er 39 år gammel«.\n\nSpørgsmålet er nu: Hvor gamle er professorerne?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Jørgensen er 38 år gammel, Morrison er 68, og Schwartz er 29. De lyver, mens de tre sandfærdige professorer er Watson på 26, Frandsen på 39 og Gregersen på 61 år.\n\nVi kan starte med Morrison, som påstår, at han er 51 år. Så lyver han, og ergo er han under 40 eller netop 68 år.\n\nSchwartz lyver dermed også, når han påstår, at Morrison er 52 år, og derfor har Schwartz netop alderen 29 år. Sådan fortsætter man, til alle er aldersbestemt.\n\nIllustration: Ingeniøren."
       },
       "evaluation": {
         "text": null,

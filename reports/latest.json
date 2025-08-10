@@ -1,19 +1,36 @@
 {
-  "generated_at_iso": "2025-08-10T08:44:39",
+  "generated_at_iso": "2025-08-10T09:49:45",
   "items": [
     {
       "task": {
-        "title": "Hjælp den dødsdømte | Ingeniøren",
-        "url": "https://ing.dk/artikel/hjaelp-den-doedsdoemte",
-        "number": 225,
-        "text": "Opgave 225:\n\nEn dødsdømt får en sidste chance. Han skal vælge mellem to døre fra cellen – den ene fører til friheden, den anden til galgen.\n\nHan må stille ét spørgsmål om dørene til sine to fangevogtere. Den ene taler altid sandt, den anden lyver altid – og den dødsdømte ved ikke, hvem som gør hvad.\n\nKan den dødsdømte finde den rigtige dør og redde livet?"
+        "title": "Mål et skævt kvadrat | Ingeniøren",
+        "url": "https://ing.dk/artikel/maal-et-skaevt-kvadrat-0",
+        "number": 395,
+        "text": "Opgave 395:\n\nTre parallelle linjer ligger med afstandene 5 og 7.\n\nPå de tre linjer ligger punkterne A, B og C, som sammen med D udgør hjørnerne i et kvadrat.\n\nHvad er arealet af dette kvadrat?"
       },
       "proposed": {
-        "presentation": null,
-        "structured": null
+        "presentation": "144 kvadratenheder",
+        "structured": {
+          "understanding": "Vi skal finde arealet af et kvadrat dannet af punkterne A, B, C og D, hvor A, B, og C ligger på tre parallelle linjer med afstande 5 og 7.",
+          "classification": "Geometri",
+          "data": [
+            "Afstand mellem linjerne: 5 og 7",
+            "Tre parallelle linjer: L1, L2, L3",
+            "A, B, C er punkter på disse linjer",
+            "D er det fjerde hjørne i kvadratet"
+          ],
+          "method": "Beregning af arealet ved at finde sidelengden af kvadratet, der svarer til højden mellem linjerne.",
+          "steps": [
+            "Betragt den vertikale afstand mellem de tre linjer: 5 + 7 = 12.",
+            "Kvindere arealet som sidelængde^2, hvor sidelængden er 12.",
+            "Areal = 12^2."
+          ],
+          "control": "Arealet skal være lig med kvadratet af sidelængden, som svarer til afstanden mellem de parallelle linjer.",
+          "presentation": "144 kvadratenheder"
+        }
       },
       "official": {
-        "text": "Løsning på opgave 225: Hjælp den dødsdømte\n\nDen stakkels dødsdømte kan redde sig ved at blade begge fangevogtere ind i sit ene spørgsmål. For eksempel således:\n\n»Hvis jeg spurgte den anden fangevogter, om dette er døren til friheden, hvad ville han så svare?«\n\nUanset hvem den dødsdømte taler med, vil svaret være modsat virkeligheden. Så et nej betyder altså, at døren fører til friheden."
+        "text": "Det ‘skæve’ kvadrat har arealet 74. For at finde den løsning tegner vi først en hjælpelinje gennem hjørnet B og vinkelret på de tre parallelle linjer. Derved opstår to lige store, retvinklede trekanter uden for kvadratet, og de har begge kvadratets side s som hypotenuse og kateterne 5 og 7.\n\nAltså gælder s2 = 52 = 74, hvilket netop er kvadratets areal."
       },
       "evaluation": {
         "text": null,
@@ -23,17 +40,17 @@
     },
     {
       "task": {
-        "title": "Få kontakt mellem lamperne | Ingeniøren",
-        "url": "https://ing.dk/artikel/faa-kontakt-mellem-lamperne",
-        "number": 318,
-        "text": "Opgave 318:\n\nLars befinder sig i et hus, hvor der er tre ens lamper på første sal. Kontakterne til de tre lamper sidder imidlertid nede i kælderen., og Lars vil gerne finde ud af, hvilken kontakt der tænder præcis hvilken lampe.\n\nMen han er alene i huset og gider kun gå én gang op i soveværelset. Ledningerne er skjulte, og han kan ikke se lamperne fra kælderen. Han må heller ikke trække ekstra ledninger, bruge værktøj eller andet snyderi. Hvordan kan Lars løse den opgave?"
+        "title": "Del whiskyen i tre glas | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-whiskyen-i-tre-glas",
+        "number": 378,
+        "text": "Opgave 378:\n\nI en flaske whisky er indholdet decimeret til 21 cl. Det vil tre venner gerne dele ligeligt, så hver får netop 7 cl.\n\nSøren har et glas på 11 cl, og Erik to glas på 8 og 5 cl – mens Bjørn regner med at drikke sin del fra flasken. Hvordan kan de klare tredelingen ved at omhælde mellem flaske og glas?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Først tænder man en af kontakterne i kælderen og venter et stykke tid. Så slukker man kontakten igen og tænder en af de andre, hvorefter man straks går op på 1. sal.\n\nDen pære, som er slukket men varm, hører til den første kontakt. Den tændte pære hører naturligvis til den tændte kontakt, og den slukkede og kolde pære hører til den sidste og urørte kontakt."
+        "text": "11 omhældninger af i alt 56 cl er nok til at klare tredelingen. Løsningen ser sådan ud, idet de fire talkolonner repræsenterer henholdvis whiskyflasken og de tre glas på 11, 8 og 5 cl:\n\n21 – 0 – 0 – 0 10 – 11 – 0 – 0 10 – 6 – 0 – 5 10 – 0 – 6 – 5 10 – 5 – 6 – 0 10 – 5 – 1 – 5 10 – 10 – 1 – 0 10 – 10 – 0 – 1 2 – 10 – 8 – 1 2 – 11 – 7 – 1 2 – 7 – 7 – 5 7 – 7 – 7 – 0"
       },
       "evaluation": {
         "text": null,
@@ -63,57 +80,17 @@
     },
     {
       "task": {
-        "title": "Saml din egen fodbold | Ingeniøren",
-        "url": "https://ing.dk/artikel/saml-din-egen-fodbold",
-        "number": 356,
-        "text": "Opgave 356:\n\nMan kan dække en kugle med regulære femkanter og sekskanter, som samles, så de mødes tre og tre i hvert hjørne (og hverken overlapper eller har huller). Det er for eksempel sådan, en almindelig læderfodbold er lavet.\n\nHvor mange femkanter skal der bruges?"
+        "title": "Beregn Børges baghave | Ingeniøren",
+        "url": "https://ing.dk/artikel/beregn-boerges-baghave",
+        "number": 280,
+        "text": "Opgave 280:\n\nBørge ­opdagede, at hans grund kan inddeles fuldstændigt i 13 kvadrater som vist på tegningen. Det mindste, sorte kvadrat er netop 1 kvadratmeter. Hvor stor er så hele Børges grund?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Når man skal dække en kugle med regulære fem- og sekskanter, skal man altid bruge netop 12 femkanter. Det gælder sjovt nok uanset kuglens størrelse (og dermed antallet af sekskanter).\n\nFor at løse opgaven skal vi bruge Eulers regel: flader + hjørner = kanter + 2.\n\nHvis vi bruger f femkanter og s sekskanter, bliver antal flader f+s, og antal hjørner er (5f+6s)/3, idet netop tre af ‘5/6-kanterne’ skal mødes i hvert hjørne. Antal kanter er (5f+6s)/2. Eulers regel siger da f + s + (5f+6s)/3 = (5f+6s)/2 + 2 ­eller 8f/3 + 3s = 5f/2 + 3s + 2, hvoraf F = 12."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
-        "title": "Sig tillykke til Lis | Ingeniøren",
-        "url": "https://ing.dk/artikel/sig-tillykke-til-lis",
-        "number": 325,
-        "text": "Opgave 325:\n\nDet var en råkold vinterdag i 1990’erne, da Lis kom på besøg hos tante Erna. Talen faldt naturligt på deres respektive runde fødselsdage, og Erna bad Lis tage halvdelen af Ernas lagkagelysestager fra festen i januar, når Lis skulle fejres i næste uge.\n\n»Tak,« sagde Lis, der er ingeniør. »Når jeg tænder dem, er jeg præcis halvt så mange dage gammel som du.«\n\nDu tror ikke, der er oplysninger nok, men alligevel lyder spørgsmålet: Hvilket år er Lis født?"
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "Lis er født i 1948, nærmere bestemt den 2. februar. Og Erna er født 31. januar 1898. Den 2. februar 1998 har Erna dermed levet 36526 dage, præcis det dobbelte af Lis’ 18263 dage.\n\nDet særlige ved opgaven er, at der skal være en forskel på flere dage mellem Ernas alder i dage og det dobbelte af Lis’ alder. Det kræver, at Erna er født før år 1900, som jo ikke er et skudår, for så kan der være en forskel på to dage.\n\nBegge fejrer rund fødselsdag, og da 120 år er meren end nogen nulevende dansker er nået op på, må det være 100 år for Erna og 50 år for Lis.\n\nLis’ besøg finder sted i februar, mens Erna fejrede fødselsdag i januar. Samtidig siger de »næste uge« om Lis’ runde dag. Derfor må Erna have fødselsdag 31. januar og Lis den 2. februar, og 1. februar må være en søndag, så 2. februar ligger i næste uge.\n\nEneste år i 1990’erne med 1. februar på en søndag var 1998, så det er året, vi taler om."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
-        "title": "Byg en plankebro | Ingeniøren",
-        "url": "https://ing.dk/artikel/byg-en-plankebro",
-        "number": 281,
-        "text": "Opgave 281:\n\nI denne opgave gælder det om at komme over en 1,6 meter bred grøft ved hjælp af smalle planker på 1,5 meters længde, når det ikke er tilladt at bruge andet end plankerne. Hvor få planker kan man klare sig med?"
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "Man kan komme over grøften med kun tre af de for korte planker. For eksempel sådan som tegningen viser.\n\nMan kan selvfølgelig klare sig med to planker, hvis man snyder, og grøften ikke er alt for dyb. Lad simpelthen en planke gå fra den ene bred og ned til bunden af grøften. Så kan den anden planke nå fra den modsatte bred og over til den første planke.\n\nOg har man en ven til at holde den ene ende af planken, kan man sågar nøjes med én. Men det er også snyd.\n\nSe flere Tænkeboks-opgaver her"
+        "text": "Børges grund er 933 ⅓ kvadratmeter stor. Den løsning findes ved at kalde et par kvadratsider x og y og derefter successivt opstille alle sammenhængene mellem kvadraternes sidelængder. På den måde ender man med to ligninger med to ubekendte.\n\nVælger vi for eksempel de to kvadrater lige til højre for den sorte firkant og kalder deres sider for x og y, så kan vi bevæge os rundt i Børges have nedefter og mod venstre og får udtrykt sidelængden af det midterste kvadrat foroven som 3x-y+6. Ergo har vi ligningen 3x-y+6 = x+y.\n\nPå tilsvarende vis kan vi bevæge os nedad fra midten af haven og rundt til højre, hvorved vi får 26x-15y+15 = x+y. Når de to ligninger er løst, finder vi grundens sidelængder til 25 meter og 37 ⅓ meter og deraf arealet."
       },
       "evaluation": {
         "text": null,
@@ -143,26 +120,6 @@
     },
     {
       "task": {
-        "title": "Tæl til 12 med regnestykker | Ingeniøren",
-        "url": "https://ing.dk/artikel/tael-til-12-med-regnestykker",
-        "number": 224,
-        "text": "Opgave 224:\n\nHer er et smart regnestykke, hvor hvert bogstav står for et ciffer, positivt eller negativt (altså mellem -9 og 9). Ingen af bogstaverne står for det samme ciffer."
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "Y=-9, R=-8, Ø=-7, M=-5, J=-3, A=-2, N=-1, T=0, E=1, O=2, V=3, I=4, D=5, L=6, S=7 og F=8."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
         "title": "Del en trekant | Ingeniøren",
         "url": "https://ing.dk/artikel/del-en-trekant",
         "number": 110,
@@ -183,17 +140,97 @@
     },
     {
       "task": {
-        "title": "Skriv tal med mellemrum | Ingeniøren",
-        "url": "https://ing.dk/artikel/skriv-tal-med-mellemrum",
-        "number": 253,
-        "text": "Opgave 253:\n\nTag de hele tal fra 1 til n. Brug to af hver og arranger dem i rækkefølge, så der er ét tal imellem de to 1-taller, to tal imellem de to 2-taller osv.\n\nMed n=3 ser det sådan ud: 3 1 2 1 3 2 – og med n=4 er en mulig løsning: 4 1 3 1 2 4 3 2.\n\nLav nu nogle længere rækker efter samme system – for eksempel en med n=7."
+        "title": "Find to usandsynlige terninger | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-usandsynlige-terninger",
+        "number": 345,
+        "text": "Opgave 345:\n\nTo terninger skal bruges til at slå et tal fra 1 til 12, og de skal alle 12 have samme sandsynlighed. Man lægger naturligvis tallene på de to terninger sammen, når man slår.\n\nHvilke tal skal der stå på de to terninger, for at summerne fra 1 til 12 alle optræder med samme sandsynlighed?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Med n=7 har vi for eksempel løsningen 2-3-7-2-6-3-5-1-4-1-7-6-5-4, og for n=8 er en mulighed 2-3-8-2-7-3-6-1-5-1-4-8-7-6-5-4. Og der er masser af andre løsninger.\n\nTil gengæld er der ingen løsninger for n=5, 6, 9 eller 10. Der skal nemlig være et lige antal ulige talpar, for at en løsning er mulig."
+        "text": "Den letteste løsning på terningeopgaven er at lade den ene terning være helt almindelig, mens den anden har tallene 0,0,0,6,6,6. Så vil de to terningers sum give tallene fra 1 til 12 med samme sandsynlighed, nemlig 3/36.\n\nBruger vi andre tal på terningen med 3 og 3 ens sider, finder vi flere ­løsninger. 0,0,0,1,1,1 og 1,3,5,7,9,11. 0,0,0,2,2,2 og 1,2,5,6,9,10. 0,0,0,3,3,3 og 1,2,3,7,8,9.\n\nLøsningerne kan varieres i det uendelige ved at lægge et tal til alle siderne på den ene terning og trække det samme tal fra på den anden."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Drik den koldeste kaffe | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-drik-den-koldeste-kaffe",
+        "number": 117,
+        "text": "Opgave 117:\n\nKaffen er 80 grader varm, når den forlader kaffekanden. Koppen er 20 grader ligesom den omgivende luft. Og mælken kommer fra køleskabet og er 5 grader varm.\n\nJeg vil gerne drikke min kaffe efter 10 minutter, men den skal være så kold som mulig. Hvornår skal jeg så komme mælken i?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Kaffen bliver hurtigst kold, hvis man venter til sidst med at hælde mælken i. Jo højere temperturforskel til omgivelserne, jo hurtigere afgives varmen. Så den 80 grader varme kaffe afgiver mere varme end den 65 grader varme blanding af mælk og kaffe – og slutresultatet bliver derfor koldere."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Hjælp Nicolai med at undgå geden | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-hjaelp-nicolai-med-undgaa-geden",
+        "number": 189,
+        "text": "Opgave 189:\n\nI et berømt tv-show kan man vinde en bil. Der er tre lukkede døre, og bag en af dem befinder bilnøglerne sig. Bag hver af de to andre døre har den ondskabsfulde tv-vært placeret en ged – så deltagerne bliver til grin, hvis de taber.\n\nNicolai deltager i showet og får lov til at vælge en dør. Men inden døren bliver åbnet, siger tv-værten: »Nu skal jeg vise dig, hvor der står en ged,« hvorefter han åbner en af de andre døre og lader geden stå et øjeblik. (Det gør tv-værten vel at mærke hver gang, uanset om deltageren vælger en ged eller nøglerne i første omgang.)"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Nicolai skal ændre sit valg, idet sandsynligheden er 2/3 for, at bilnøglerne er bag den tredje dør, mens den kun er 1/3 for, at bilnøglerne er bag den dør, han valgte før.\n\nForklaringen er, at Nicolai i første omgang har tre lige sandsynlige døre at vælge imellem.\n\nEfter hans valg er der altså 2/3 sandsynlighed for, at nøglerne er bag en af de to andre døre. Den sandsynlighed ændres ikke af, at tv-værten viser Nicolai en ged bag en af de to døre, for det kan han altid gøre, men derved elimineres den dør, og bilnøglerne ligger med 2/3 sandsynlighed bag den sidste dør.\n\nHvis Nicoline kommer ind, når studieværten har fremvist den ene ged, og ikke ved, hvad Nicolai har valgt, har hun sandsynligheden 1/2 for at finde bilnøglerne. Men Nicolai ved mere end hende og har bedre chancer.\n\nLæs mere om det såkaldte Monty-Hall-problem i denne Wikipedia-artikel.\n\nIllustration: Ingeniøren."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Bestem professorernes alder | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-bestem-professorernes-alder",
+        "number": 196,
+        "text": "Opgave 196:\n\nSeks professorer sidder om frokostbordet og diskuterer alder. Ingen af dem har samme alder, og de er alle mellem 20 og 70 år gamle.\n\nProfessorerne har et mærkeligt forhold til sandheden. Dem over 40 taler sandt, undtagen hvis deres alder er delelig med 17. Omvendt lyver alle professorerne under 40, bortset fra dem hvis alder er delelig med 13.\n\nHør nu, hvad de siger. Jørgensen: »Watson er ældre end mig«. Frandsen: »Jørgensen er 30 år yngre end Morrison«. Morrison: »Jeg er 51 år gammel«. Schwartz: »Morrison er 52 år. Jeg er ikke 29 år«. Watson: »Jørgensen lyver. Gregersen er 61«. Gregersen: »Schwartz tager fejl. Frandsen er 39 år gammel«.\n\nSpørgsmålet er nu: Hvor gamle er professorerne?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Jørgensen er 38 år gammel, Morrison er 68, og Schwartz er 29. De lyver, mens de tre sandfærdige professorer er Watson på 26, Frandsen på 39 og Gregersen på 61 år.\n\nVi kan starte med Morrison, som påstår, at han er 51 år. Så lyver han, og ergo er han under 40 eller netop 68 år.\n\nSchwartz lyver dermed også, når han påstår, at Morrison er 52 år, og derfor har Schwartz netop alderen 29 år. Sådan fortsætter man, til alle er aldersbestemt.\n\nIllustration: Ingeniøren."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Bestem trekantens vinkler | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-bestem-trekantens-vinkler",
+        "number": 108,
+        "text": "Illustration: Ingeniøren.\n\nOpgave 108:\n\nI en ligebenet trekant er tegnet tre ekstra linjer. Hvor stor er vinkel x?\n\nRegner man blot løs på vinklerne, bliver det meget kompliceret. Så i stedet gælder det om at indtegne et par smarte hjælpelinjer."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Vinkel x er 50 grader.\n\nVi vælger punktet P, så linjestykkerne AD og PD er lige lange.\n\nSå viser det sig, at også BP, PC og CD har samme længde.\n\nVinklerne PCD, CDP og DPC er ens, altså 60 grader.\n\nVinkel BPC er 40 grader, og så er vinklerne PBC og BCP hver 70 grader.\n\nAltså er vinkel x 50 grader.\n\nRettelse: En fejl i opgaveformuleringen fra uge 41 (Regn med piger) har skabt forståelig frustration blandt opgaveløserne. Opgaven er nu opdateret i artiklen her . Undskyld, vi strammer op!\n\nIllustration: Ingeniøren."
       },
       "evaluation": {
         "text": null,

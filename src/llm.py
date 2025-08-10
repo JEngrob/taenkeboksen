@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from typing import Optional, Dict, Any
+import hashlib
 
 try:
     from openai import OpenAI  # type: ignore
@@ -27,15 +28,31 @@ def available() -> bool:
     return bool(os.getenv("OPENAI_API_KEY")) and OpenAI is not None
 
 
-def solve_task(problem_text: str, model: Optional[str] = None) -> Optional[str]:
+def solve_task(problem_text: str, model: Optional[str] = None, cache_dir: Optional[str] = None) -> Optional[str]:
     if not available():
         return None
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    # Init uden proxies-arg (nogle miljøer sætter HTTP(S)_PROXY som konflikter)
+    # OpenAI() tager selv OPENAI_API_KEY fra env
+    client = OpenAI()
     primary = (model or os.getenv("OPENAI_MODEL") or "gpt-5").strip()
     fallbacks_env = os.getenv("OPENAI_MODEL_FALLBACK", "gpt-4o-mini,gpt-4o").strip()
     model_candidates = [m.strip() for m in ([primary] + fallbacks_env.split(",")) if m.strip()]
     system_prompt = _load_prompt("solver")
+
+    # Disk-cache (opt-in) pr. opgave-tekst
+    cache_root = cache_dir or os.getenv("OPENAI_LLM_CACHE")
+    cache_path: Optional[Path] = None
+    if cache_root:
+        try:
+            h = hashlib.sha1(problem_text.encode("utf-8")).hexdigest()
+            cache_root_path = Path(cache_root)
+            cache_root_path.mkdir(parents=True, exist_ok=True)
+            cache_path = cache_root_path / f"solve_{h}.txt"
+            if cache_path.exists():
+                return cache_path.read_text(encoding="utf-8").strip()
+        except Exception:
+            cache_path = None
 
     last_err: Optional[Exception] = None
     for mdl in model_candidates:
@@ -49,7 +66,13 @@ def solve_task(problem_text: str, model: Optional[str] = None) -> Optional[str]:
                     ],
                     response_format={"type": "json_object"},
                 )
-                return (resp.choices[0].message.content or "").strip()
+                content = (resp.choices[0].message.content or "").strip()
+                if cache_path:
+                    try:
+                        cache_path.write_text(content, encoding="utf-8")
+                    except Exception:
+                        pass
+                return content
             except Exception as e:
                 last_err = e
                 import time
@@ -63,7 +86,13 @@ def solve_task(problem_text: str, model: Optional[str] = None) -> Optional[str]:
                     {"role": "user", "content": problem_text[:8000]},
                 ],
             )
-            return (resp.choices[0].message.content or "").strip()
+            content = (resp.choices[0].message.content or "").strip()
+            if cache_path:
+                try:
+                    cache_path.write_text(content, encoding="utf-8")
+                except Exception:
+                    pass
+            return content
         except Exception as e:
             last_err = e
             continue
@@ -108,7 +137,7 @@ def evaluate_answer(user_answer: str, official_solution: str, model: Optional[st
     if not available():
         return None
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI()
     primary = (model or os.getenv("OPENAI_MODEL") or "gpt-5").strip()
     fallbacks_env = os.getenv("OPENAI_MODEL_FALLBACK", "gpt-4o-mini,gpt-4o").strip()
     model_candidates = [m.strip() for m in ([primary] + fallbacks_env.split(",")) if m.strip()]
