@@ -11,8 +11,8 @@ Notation:
 - [ ] `pre-commit` med `ruff`, `black`, `mypy` (konfig i repo)
 
 ## 1) Scraping – performance og robusthed
-- [ ] `requests.Session` med retries/backoff og timeouts
-- [ ] Parallel artikelhentning (IO-bound)
+- [x] `requests.Session` med retries/backoff og timeouts
+- [x] Parallel artikelhentning (IO-bound)
 - [ ] Caching af HTML (TTL), konfig via flag/ENV
 - [ ] Polite crawling: rate limiting og respekt for 429/Retry-After
 - [ ] Smartere pagination-stop (cutoff-dato / 2 tomme sider i træk)
@@ -28,17 +28,17 @@ Accept: Kørsel på 10–20 artikler er stabil, hurtig og uden unødige kald.
 Accept: ≥90% korrekt parring på et prøveudsæt; manuel spotcheck OK.
 
 ## 3) LLM – pålidelighed og evaluering
-- [ ] Håndhæv JSON-respons (hvor modellen understøtter det)
-- [ ] Robust JSON-parsing (tåler fenced code og ekstra tekst)
+- [x] Håndhæv JSON-respons (hvor modellen understøtter det)
+- [x] Robust JSON-parsing (tåler fenced code og ekstra tekst)
 - [ ] CLI `--model` + fallback-kæde; håndter 429 med backoff
 - [ ] Parallel `solve`/`evaluate` (rate-limited)
-- [ ] Evaluator returnerer kort tekst + MATCH/NO MATCH + numerisk score
+- [x] Evaluator returnerer kort tekst + MATCH/NO MATCH + numerisk score
 
 Accept: ≥95% vellykket parse; evaluatorens dom er stabil ved gentagelser.
 
 ## 4) Data- og outputstruktur
-- [ ] Indfør dataklasser: `Task`, `OfficialSolution`, `ProposedSolution`, `Evaluation`, `RunResult`
-- [ ] Udvid JSON-output: titel, URL, nr., struktureret svar, evaluering, tidsstempler
+- [x] Indfør dataklasser: `Task`, `OfficialSolution`, `ProposedSolution`, `Evaluation`, `RunResult`
+- [x] Udvid JSON-output: titel, URL, nr., struktureret svar, evaluering, tidsstempler
 - [ ] Flyt HTML til templating (fx Jinja2)
 - [ ] Tilføj søgning/filtrering i site (simpel JS)
 - [ ] CSV-eksport for flad analyse
@@ -73,10 +73,11 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 ---
 
 ## Prioritet (først at løse)
-- [ ] 1. Parallel artikelhentning + Session retries
-- [ ] 2. Robust LLM-JSON + evaluatorscore
-- [ ] 3. Udvidet JSON-output + dataklasser
+- [x] 1. Parallel artikelhentning + Session retries
+- [x] 2. Robust LLM-JSON + evaluatorscore
+- [x] 3. Udvidet JSON-output + dataklasser
 - [ ] 4. Caching + rate limiting
 
 ## Seneste status
 - 2025-08-10: Initial TODO oprettet.
+- 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.

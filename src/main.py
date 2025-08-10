@@ -11,6 +11,7 @@ from typing import List, Optional
 import re
 
 from . import scraper
+from .models import Task, ProposedSolution, OfficialSolution, Evaluation, TaskResult, RunResult
 from .llm import evaluate_answer, solve_task, parse_solver_json, available as llm_available
 
 
@@ -246,6 +247,10 @@ def main() -> None:
                   <h2 class="task-title">{idx}. {task_label}</h2>
                   <div class="task-meta"><a href="{url}" target="_blank" rel="noopener noreferrer">{url}</a></div>
                   <div class="block">
+                    <h3>Opgave (fuld tekst)</h3>
+                    <pre>{excerpt}</pre>
+                  </div>
+                  <div class="block">
                     <h3>Foreslået svar</h3>
                     <div class="answer">
                       <div class="presentation">{presentation}</div>
@@ -254,10 +259,6 @@ def main() -> None:
                         <pre>{details}</pre>
                       </details>
                     </div>
-                  </div>
-                  <div class="block">
-                    <h3>Opgave (fuld tekst)</h3>
-                    <pre>{excerpt}</pre>
                   </div>
                   <div class="block">
                     <h3>Officiel løsning</h3>
@@ -293,14 +294,54 @@ def main() -> None:
     # JSON output
     if args.out_json:
         import json
-        # Minimal scrapet JSON: KUN opgavetekst og officiel løsning
-        payload = [
-            {
-                "task": tasks_text[i],
-                "solution": official_solutions[i],
-            }
-            for i in range(len(articles))
-        ]
+        # Udvidet JSON med datamodeller
+        def parse_verdict_and_score(text: Optional[str]) -> tuple[Optional[str], Optional[float]]:
+            if not text:
+                return None, None
+            import re
+            verdict = None
+            if re.search(r"\bMATCH\b", text, re.IGNORECASE):
+                verdict = "MATCH"
+            if re.search(r"\bNO\s*MATCH\b", text, re.IGNORECASE):
+                verdict = "NO MATCH"
+            m = re.search(r"score\s*[:=]\s*([01](?:\.\d+)?)", text, re.IGNORECASE)
+            score = float(m.group(1)) if m else None
+            return verdict, score
+
+        items: list[TaskResult] = []
+        for i, art in enumerate(articles):
+            verdict, score = parse_verdict_and_score(evaluations[i])
+            items.append(
+                TaskResult(
+                    task=Task(
+                        title=art.title,
+                        url=art.url,
+                        number=task_numbers[i],
+                        text=tasks_text[i],
+                    ),
+                    proposed=ProposedSolution(
+                        presentation=proposed_answers[i],
+                        structured=structured_solutions[i],
+                    ),
+                    official=OfficialSolution(text=official_solutions[i]),
+                    evaluation=Evaluation(
+                        text=evaluations[i], verdict=verdict, score=score
+                    ),
+                )
+            )
+
+        run = RunResult(
+            generated_at_iso=datetime.now().isoformat(timespec="seconds"), items=items
+        )
+        # Serialiser som dict
+        def to_dict(obj):
+            if isinstance(obj, list):
+                return [to_dict(x) for x in obj]
+            if hasattr(obj, "__dict__"):
+                return {k: to_dict(v) for k, v in obj.__dict__.items()}
+            return obj
+
+        payload = to_dict(run)
         out_json_path = Path(args.out_json)
         out_json_path.parent.mkdir(parents=True, exist_ok=True)
         out_json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

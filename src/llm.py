@@ -36,14 +36,23 @@ def solve_task(problem_text: str, model: Optional[str] = None) -> Optional[str]:
     system_prompt = _load_prompt("solver")
 
     # GPT-5: brug standard temperatur (nogle konfigurationer tillader kun default)
-    resp = client.chat.completions.create(
-        model=model_name,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": problem_text[:8000]},
-        ],
-        # undlad at sætte temperatur eksplicit
-    )
+    try:
+        resp = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": problem_text[:8000]},
+            ],
+            response_format={"type": "json_object"},
+        )
+    except Exception:
+        resp = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": problem_text[:8000]},
+            ],
+        )
     return (resp.choices[0].message.content or "").strip()
 
 
@@ -51,20 +60,34 @@ def parse_solver_json(text: Optional[str]) -> Optional[Dict[str, Any]]:
     if not text:
         return None
     import json
+    import re
+    s = text.strip()
+    # Fjern fenced blokke hvis hele indholdet er i ``` ... ```
+    if s.startswith("```") and s.endswith("````"):
+        s = re.sub(r"^```(?:json)?\s*|\s*```$", "", s, flags=re.IGNORECASE | re.DOTALL).strip()
+    # Scan efter første balancerede {...}
+    depth = 0
+    start = None
+    for i, ch in enumerate(s):
+        if ch == "{":
+            if start is None:
+                start = i
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0 and start is not None:
+                candidate = s[start : i + 1]
+                try:
+                    obj = json.loads(candidate)
+                    return obj if isinstance(obj, dict) else None
+                except Exception:
+                    start = None
+    # sidste forsøg: direkte parse
     try:
-        # prøv at finde første JSON-objekt
-        stripped = text.strip()
-        # hvis modellen kom til at tilføje ```json fences, fjern dem
-        if stripped.startswith("```"):
-            stripped = stripped.strip("`")
-            if stripped.lower().startswith("json"):
-                stripped = stripped[4:]
-        obj = json.loads(stripped)
-        if isinstance(obj, dict):
-            return obj
+        obj = json.loads(s)
+        return obj if isinstance(obj, dict) else None
     except Exception:
         return None
-    return None
 
 
 def evaluate_answer(user_answer: str, official_solution: str, model: Optional[str] = None) -> Optional[str]:

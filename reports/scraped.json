@@ -1,42 +1,205 @@
-[
-  {
-    "task": "Opgave 250:\n\nFru Petersen kører hver eftermiddag på samme tidspunkt til stationen for at hente sin mand. Hun kører 50 km/t hele vejen. Han ankommer normalt med toget kl. 16.30, netop som hun ankommer med bilen.\n\nEn dag ankommer hr. Petersen med toget en time tidligere, og da denne opgave foregår længe før mobiltelefonernes indtog, begynder han bare at spadsere hjemad. På vejen møder han naturligvis fru Petersen i bilen, og sammen når de hjem præcis et kvarter tidligere, end de plejer. Hvor hurtigt spadserer hr. Petersen?",
-    "solution": "Løsning på opgave 250: Hent hr. Petersen\n\nHr. Petersen går eller småløber 7,14 km i timen.\n\nDa han går sin kone i møde, ender turen med, at hun sparer et kvarters kørsel, hvilket med 50 km/t er 12,5 km. Det er afstanden fra mødestedet til stationen og tilbage igen.\n\nHr. og fru Petersen mødes et halvt kvarter før kl. 16.30, og han har derfor gået 6,25 km på 7/8 time. Det giver den hurtige ganghastighed 50/7 km/t. Bemærk, at vi stadig ikke ved, hvor langt fra stationen hr. og fru Petersen bor – kun at det er mere end 6,25 km."
-  },
-  {
-    "task": "Opgave 414:\n\nVed hjælp af rette linjer skal et kvadrat deles op i lutter spidsvinklede trekanter, altså hvor alle vinkler er mindre end 90 grader. Hvor få linjer kan man gøre det med?",
-    "solution": "Kvadratet kan deles op i spidsvinklede trekanter med ni linjer – og resultatet bliver otte trekanter. I praksis kan trekanternes størrelse og linjernes placering naturligvis varieres i det uendelige."
-  },
-  {
-    "task": "Opgave 220:\n\nMeget tit er der nabotal blandt de ni udtrukne tal i lotto. Men hvad er egentlig sandsynligheden for, at der ikke er nabotal blandt de ni udtrukne tal (syv vindertal og to tillægstal), trukket blandt tallene 1-36?",
-    "solution": "Vi undgår kun nabotal blandt de ni udtrukne lottotal u 7,3 procent af trækningerne."
-  },
-  {
-    "task": "Opgave 409:\n\nEt landkort på papir er opdelt i 8 kvadrater placeret som 4 gange 2. Papiret må kun foldes efter kvadraternes kanter, altså enten på langs eller tværs, men aldrig diagonalt eller på andre måder skråt.\n\nKvadraterne er nummereret fra 1 til 8, og det gælder om at få foldet kortet, så der dannes et sammenfoldet kvadrat, hvor de otte tal ligger bag hinanden og kommer i rækkefølge fra 1 (øverst) til 8 (nederst). Om hvert ciffer står spejlvendt eller på hovedet eller på bagsiden af papiret er ligemeget, bare rækkefølgen passer.\n\nDet første kort ser sådan ud:\n\n1 8 7 4\n\n2 3 6 5\n\nDet næste er lidt sværere:\n\n1 8 2 7\n\n4 5 3 6",
-    "solution": "Det første kort\n\n1 8 7 4\n\n2 3 6 5\n\nklares ved, at højre ­halvdel først foldes bagud bag den venstre. Dernæst foldes øverste halvdel bagud bag den nederste. Nu skal 4 og 5 inde i midten foldes fremad mellem 3 og 6, hvorefter venstre del med 1 og 2 foldes fremad (foran 3) – og så ligger 1 til 8 i rækkefølge som ønsket.\n\n1 8 2 7\n\n4 5 3 6\n\ner lidt sværere – ikke mindst at forklare. Først foldes nederste halvdel bagud bag den øverste. Venstre ­fjerdedel (med 1 og 4) bliver på sin plads, mens resten foldes bagud.\n\nOg så kommer det svære: 6 og 7 stikkes nu ind mellem 1 og 4 og føres videre ind mellem 5 og 8. Det betyder, at 2 og 3 samtidig ender mellem 1 og 4 – og at vi ender med 1 til 8 i den rigtige rækkefølge."
-  },
-  {
-    "task": "Opgave 104:\n\nEt reb hænger i en talje. Et lod er bundet i rebets ene ende, mens en abe hænger i den anden. Rebet er lige langt i begge sider, og der er ligevægt.\n\nRebet vejer 250 g pr. meter. Aben og dens mor er tilsammen fire år gamle, og aben vejer lige så mange kg som morens alder er i år.\n\nSå kommer det svære: Abens mor er dobbelt så gammel, som aben var, da dens mor var halvt så gammel, som aben vil være, når den er tre gange så gammel, som  dens mor var, da hun var tre gange så gammel som aben.\n\nVægten af hele rebet plus loddet i enden er halvanden gang så meget som forskellem mellem loddets vægt og loddets og abens vægt.\n\nHvor langt er rebet?",
-    "solution": "Rebet er 5 meter langt. Løsningen involverer i alt 14 ligninger, som heldigvis er ganske simple at løse. Husk, at når abens mor bliver et antal år ældre, så gør aben det naturligvis også.\n\nDet fører (efter nogle mellemregninger) til, at aben nu er halvandet år gammel, mens dens mor er to et halvt år. Så vejer aben 2,5 kg, og rebet det halve (ifølge den kryptiske formulering i opgavens sidste afsnit). Dermed er det 5 meter langt."
-  },
-  {
-    "task": "Opgave 305:\n\nOpgaven handler om noget så dejlig håndgribeligt som en station, hvor seks lokaltog vender tilbage for natten. De holder på de seks spor (med fortløbende numre) omkring drejeskiven.\n\nLokomotivførerne Bent og Dorte holder hverken på spor 4 eller 6. Bent kommer fra Bromme. Erik holder ved siden af føreren fra Venslev. Han kommer hverken fra Hellum eller Dalby, men nogle af de andre gør.\n\nAnne kommer fra Torsted, hun har enten ‘Anden’ eller ‘Koen’. Claus holder på spor 1 og ved siden af ‘Hønen’. ‘Grisen’ og ‘Hønen’ er ikke fra Hellum.\n\nToget fra Klastrup ­holder altid på spor 5. Kirsten fra Venslev holder ved siden af Claus.\n\nDet sidste tog var ‘Hesten’ på spor 3. ‘Koen’ fra Klastrup kom før Kirstens tog ‘Hunden’.\n\nHvor kommer de ­enkelte lokomotivførere fra, hvor holder de, og hvilke tog har de?",
-    "solution": "Claus fra Dalby holder på spor 1 med ‘Grisen’, Bent fra Bromme på spor 2 med ‘Hønen’, Dorte fra Hellum på spor 3 med ‘Hesten’, Anne fra Torsted på spor 4 med ‘Anden’, Erik fra Klastrup på spor 5 med ‘Koen’, og endelig holder Kirsten fra Venslev på spor 6 med ‘Hunden’.\n\nLøsningen findes ved at anvende de givne oplysninger én efter én og efterhånden udelukke de fleste kombinationer."
-  },
-  {
-    "task": "Opgave 395:\n\nTre parallelle linjer ligger med afstandene 5 og 7.\n\nPå de tre linjer ligger punkterne A, B og C, som sammen med D udgør hjørnerne i et kvadrat.\n\nHvad er arealet af dette kvadrat?",
-    "solution": "Det ‘skæve’ kvadrat har arealet 74. For at finde den løsning tegner vi først en hjælpelinje gennem hjørnet B og vinkelret på de tre parallelle linjer. Derved opstår to lige store, retvinklede trekanter uden for kvadratet, og de har begge kvadratets side s som hypotenuse og kateterne 5 og 7.\n\nAltså gælder s2 = 52 = 74, hvilket netop er kvadratets areal."
-  },
-  {
-    "task": "Opgave 279:\n\nEn pram er 5 meter lang og 4 meter bred og flyder i en lille, cirkulær sø, der har diameteren 101,5 meter og (for enkelhedens skyld) lodrette sider. I prammen sidder fire ­personer, som gerne vil spille kort, selvom der faktisk ikke er plads nok til det.\n\nDerfor smider de lasten over bord: 7,5 ton sten og 3,93 ton jernkæde samt to tomme, lukkede olietønder på hver 50 kg. Stenene og kæden ryger til bunds, mens tønderne flyder.\n\nHvor meget stiger vandstanden i den lille sø?\n\nFor at kunne regne det ud skal I lige vide, at stenenes massefylde er 2,5 kg, og jernkædens massefylde 7,86 i forhold til vands.",
-    "solution": "Vandstanden i den lille sø falder 0,98 mm, når de ­fire mænd smider sten, kæde og tønder over bord fra deres pram. Så vandet stiger altså ikke, selvom opgaveteksten drilsk havde antydet det.\n\nForklaringen er helt ­efter gode gamle Arkimedes og hans lov. Når tingene ligger i båden (som flyder), fortrænger de vand svarende til deres vægt. Når de smides over bord (og går til bunds), fortrænger de kun vand svarende til deres rumfang.\n\nTønderne flyder i begge tilfælde, så de ændrer ikke vandstanden i søen. Sten plus kæde vejer 11,43 ton (svarende til 11.430 liter vand), men fylder kun 3,5 kubikmeter (svarende til 3.500 liter). Ergo fortrænger de 7.930 liter vand mindre, og delt med søens areal giver det en lille millimeter lavere vandstand."
-  },
-  {
-    "task": "Opgave 105:\n\nPå en boghylde står et trebindsværk, hvor hvert bind er på 200 sider.\n\nEn lille bogorm udklækkes i bind 1 på side 1 og gnaver sig derefter frem til side 200 i bind 3.\n\nHver side er 0,2 mm tyk, og bøgernes omslag er 2 mm tykt. Hvor langt har den forædte bogorm bevæget sig?",
-    "solution": "Bogormen har bevæget sig 28 millimeter.\n\nSide 1 i en bog er i højre side af bogen, når de står normalt på reolen og dermed tæt på næste bind.\n\nDermed spiser bogormen kun siderne i bind 2, men hele 4 omslag. Hvert stykke papir i bogen svarer til to sider, så i alt spiser ormen 100 x 0,2 mm = 28 mm."
-  },
-  {
-    "task": "Opgave 378:\n\nI en flaske whisky er indholdet decimeret til 21 cl. Det vil tre venner gerne dele ligeligt, så hver får netop 7 cl.\n\nSøren har et glas på 11 cl, og Erik to glas på 8 og 5 cl – mens Bjørn regner med at drikke sin del fra flasken. Hvordan kan de klare tredelingen ved at omhælde mellem flaske og glas?",
-    "solution": "11 omhældninger af i alt 56 cl er nok til at klare tredelingen. Løsningen ser sådan ud, idet de fire talkolonner repræsenterer henholdvis whiskyflasken og de tre glas på 11, 8 og 5 cl:\n\n21 – 0 – 0 – 0 10 – 11 – 0 – 0 10 – 6 – 0 – 5 10 – 0 – 6 – 5 10 – 5 – 6 – 0 10 – 5 – 1 – 5 10 – 10 – 1 – 0 10 – 10 – 0 – 1 2 – 10 – 8 – 1 2 – 11 – 7 – 1 2 – 7 – 7 – 5 7 – 7 – 7 – 0"
-  }
-]
+{
+  "generated_at_iso": "2025-08-10T08:05:50",
+  "items": [
+    {
+      "task": {
+        "title": "Find alderen på Peters mor | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-alderen-paa-peters-mor",
+        "number": 282,
+        "text": "Opgave 282:\n\nPeters mor har fødelsdag, og i den anledning har Peter fået lov til at invitere nogle gæster med til middagen – heriblandt tre personer, som hans mor ikke kender.\n\nUnder middagen spørger hun interesseret til deres alder, men Peter kommer dem  i forkøbet og foreslår, at hun skal gætte den. Som hjælp fortæller han, at produktet af de tre aldre er 2450. Han oplyser yderligere, at ingen af de tilstedeværende er under to år, og at moderen er dagens eneste fødselar.\n\nPeters mor tænker lidt over dette, men må konstatere, at de givne oplysninger langtfra er tilstrækkelige til, at hun kan give et entydigt svar, og hun beder derfor Peder om yderligere hjælp.\n\nPeter medgiver, at der må nogle flere facts til, og han oplyser derfor, at de tre gæster tilsammen er dobbelt så gamle som han selv. Efter endnu en tænkepause må Peters mor dog konstatere, at hun stadig ikke kan løse opgaven.\n\nPeter anerkender problemet og indvilger derfor i at give en sidste og afgørende oplysning, nemlig at moderen er den ældste af dem alle.\n\n»Hvis det er tilfældet, er der ikke længere noget at være i tvivl om,« siger Peters mor og oplyser herefter den korrekte alder på de tre gæster."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Peters mor var 17 år gammel, da hun fødte Peter.\n\n2450 kan faktoriseres på 11 måder, hvoraf to har den samme sum og dermed ­giver samme alder for Peter – nem-lig 5+10+49 og 7+7+50.\n\nDem skal moderen vælge imellem ud fra sin alder, som er højere end alle andres. Det kan kun betyde, at hun netop fylder 50 år.\n\nPeters alder er 32 år, men han er desuden nogle dage gammel, eftersom kun moderen har fødselsdag. Hun var derfor kun 17 år, da hun fødte ham."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Del 13 volt med seks modstande | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-13-volt-med-seks-modstande",
+        "number": 264,
+        "text": "Opgave 264:\n\nMax fandt et gammelt kredsløb med to ledninger ind og to ud. Når der er 13 V på indgangen, er der netop 1 V (ubelastet) på udgangen.\n\nDesværre var kredsløbet brændt sammen, så Max kunne ikke se, hvordan modstandene var forbundet. Men der var seks modstande på hver 10 Ohm, og de var ikke så store, så det gælder om at finde det kredsløb, hvor modstandene belastes mindst."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Mindst mulige belastning af mostandene er 2,5 W – og i det bedste kredsløb på tegningen er det naturligvis de to modstande ved indgangen, som belastes mest."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Beregn Børges baghave | Ingeniøren",
+        "url": "https://ing.dk/artikel/beregn-boerges-baghave",
+        "number": 280,
+        "text": "Opgave 280:\n\nBørge ­opdagede, at hans grund kan inddeles fuldstændigt i 13 kvadrater som vist på tegningen. Det mindste, sorte kvadrat er netop 1 kvadratmeter. Hvor stor er så hele Børges grund?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Børges grund er 933 ⅓ kvadratmeter stor. Den løsning findes ved at kalde et par kvadratsider x og y og derefter successivt opstille alle sammenhængene mellem kvadraternes sidelængder. På den måde ender man med to ligninger med to ubekendte.\n\nVælger vi for eksempel de to kvadrater lige til højre for den sorte firkant og kalder deres sider for x og y, så kan vi bevæge os rundt i Børges have nedefter og mod venstre og får udtrykt sidelængden af det midterste kvadrat foroven som 3x-y+6. Ergo har vi ligningen 3x-y+6 = x+y.\n\nPå tilsvarende vis kan vi bevæge os nedad fra midten af haven og rundt til højre, hvorved vi får 26x-15y+15 = x+y. Når de to ligninger er løst, finder vi grundens sidelængder til 25 meter og 37 ⅓ meter og deraf arealet."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Saml din egen fodbold | Ingeniøren",
+        "url": "https://ing.dk/artikel/saml-din-egen-fodbold",
+        "number": 356,
+        "text": "Opgave 356:\n\nMan kan dække en kugle med regulære femkanter og sekskanter, som samles, så de mødes tre og tre i hvert hjørne (og hverken overlapper eller har huller). Det er for eksempel sådan, en almindelig læderfodbold er lavet.\n\nHvor mange femkanter skal der bruges?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Når man skal dække en kugle med regulære fem- og sekskanter, skal man altid bruge netop 12 femkanter. Det gælder sjovt nok uanset kuglens størrelse (og dermed antallet af sekskanter).\n\nFor at løse opgaven skal vi bruge Eulers regel: flader + hjørner = kanter + 2.\n\nHvis vi bruger f femkanter og s sekskanter, bliver antal flader f+s, og antal hjørner er (5f+6s)/3, idet netop tre af ‘5/6-kanterne’ skal mødes i hvert hjørne. Antal kanter er (5f+6s)/2. Eulers regel siger da f + s + (5f+6s)/3 = (5f+6s)/2 + 2 ­eller 8f/3 + 3s = 5f/2 + 3s + 2, hvoraf F = 12."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tæl til 12 med regnestykker | Ingeniøren",
+        "url": "https://ing.dk/artikel/tael-til-12-med-regnestykker",
+        "number": 224,
+        "text": "Opgave 224:\n\nHer er et smart regnestykke, hvor hvert bogstav står for et ciffer, positivt eller negativt (altså mellem -9 og 9). Ingen af bogstaverne står for det samme ciffer."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Y=-9, R=-8, Ø=-7, M=-5, J=-3, A=-2, N=-1, T=0, E=1, O=2, V=3, I=4, D=5, L=6, S=7 og F=8."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Put ti tal på plads | Ingeniøren",
+        "url": "https://ing.dk/artikel/put-ti-tal-paa-plads",
+        "number": 322,
+        "text": "Opgave 322:\n\nCifrene fra 0 til 9 er repræsenteret ved ti forskellige symboler, som udmærker sig ved at ligne hinanden bortset fra deres ‘retning’.\n\nSymbolerne er nu stillet op i et mærligt regnestykke, hvor tallene i rammen skal kunne lægges sammen på alle fire ledder og give resultaterne vist udenfor.\n\nDet drilske er, at når figuren drejes, ændrer symbolerne sig. Set fra højre står der for eksempel:"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Cifrene 0123456789 svarer til tegnene ⇒↔∩∪↕⊂⊃⇑⇓⇐.\n\nDet  er lidt svært at forstå det med at dreje figuren og se regnstykkerne, og for det andet er tegnet ⇓ slet ikke med i regnestykkerne. Men bortset fra disse indledende besværligheder er der bare tale om at pusle løs, indtil løsningen er der.\n\nNår de fire additioner er stillet op, kan man starte med at udelukke cifferet 0, som alt andet end ⇒ eller ⇓. 9 kan ikke stå som første ciffer inde i firkanten osv. osv."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Find gevinsten på den enarmede | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-gevinsten-paa-den-enarmede",
+        "number": 412,
+        "text": "Opgave 412:\n\nEn lidt speciel enarmet tyve­knægt har fem ruder, som hver med lige stor sandsynlighed viser et af cifrene fra 0 til 9.\n\nGevinsten udregnes herefter som produktet af de fem viste cifre – og udbetales i øre. Maksimalt kan man altså vinde 9 · 9 · 9 · 9 · 9 = 59049 øre ved et spil – og bare én af ruderne viser 0, vinder man ingenting.\n\nHvor stor skal indsatsen være på denne enarmede tyveknægt, for at det går lige op med den forventede gevinst på langt sigt?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Spilleautomaten giver i gennemsnit 1.845,28 øre i gevinst pr. spil. Så hvis ikke maskinens ejer skal tabe penge på den på langt sigt, skal indsatsen være 1.846 øre.\n\nIdet hver rude kan vise et af cifrene fra 0 til 9, viser den enarmede tyveknægt i alt 100.000 forskellige værdier i ruderne. Hver gang er gevinsten produktet af de fem cifre, og den gennemsnitlige gevinst er derfor summen af alle produkterne divideret med 100.000.\n\nDer er heldigvis en lettere måde at regne det ud på, for vi kan i stedet tage ­produktet af alle summerne, altså (0+1+2+3+4+5+6+7+8+9)5. Gevinsten bliver derfor i snit 455/105 = 1.845,28 øre."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tæl fiskerens fangst | Ingeniøren",
+        "url": "https://ing.dk/artikel/tael-fiskerens-fangst",
+        "number": 370,
+        "text": "Opgave 370:\n\nEn fisker har fanget et antal fisk. De tre tungeste vejer tilsammen 35 procent af fangstens samlede vægt. Dem sælger han. Herefter udgør de tre letteste fisk tilsammen 5/13 af resten – igen efter vægt naturligvis."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Fiskeren fangede ti fisk. Vi omregner vægten af de tre letteste fisk til procent – og 5/13 af 65 procent er 25 procent. Altså vejer de tre letteste fisk i gennemsnit hver 8,33 procent af fangsten, og de tre tungeste vejer i snit 11,67 procent.\n\nDe resterende fisk ­vejer tilsammen 40 procent af fangsten, og det kan kun passe, hvis der er fire, som i snit vejer 10 procent. Fem fisk ville betyde, at mindst én af dem var lettere end de letteste fisk, og tre fisk ville tilsvarende være for tunge. Ergo fangede fiskeren 3+4+3 = 10 fisk."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Find terningens modstand | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-find-terningens-modstand",
+        "number": 80,
+        "text": "Opgave 80:\n\nEn terning er opbygget af 12 metaltråde, som hver har modstanden 1 Ohm.\n\nHvad er den samlede modstand mellem to af terningens diagonalt modsatte hjørner?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Læs også: Tænkeboks: Find terningens modstand\n\n5/6 Ohm er terningens modstand. Fra hjørnet går tre tråde, som hver deler sig i to, og de samles igen to og to til tre tråde til det modsatte hjørne. Da alt er symmetrisk, har vi samme spænding efter de tre første tråde og kan derfor samle de tre hjørner. Samme med de tre sidste tråde.\n\nVi har altså først tre parallelforbundne tråde, dernæst seks og til slut igen tre. Samlet modstand: 1/3 Ohm + 1/6 Ohm + 1/3 Ohm.\n\nIllustration: Ingeniøren."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tænkeboks: Planlæg en skattejagt | Ingeniøren",
+        "url": "https://ing.dk/artikel/taenkeboks-planlaeg-en-skattejagt",
+        "number": 120,
+        "text": "Opgave 120:\n\nSeks hold på en skattejagt skal finde seks poster. Holdene starter fra hver sin post og skal siden løbe hver sin rute til de andre poster.\n\nFor at et hurtigt hold ikke kan indhente et langsomt hold og se, hvor næste post er, må ingen af holdene besøge de samme to poster lige efter hinanden.\n\nHvordan skal holdene løbe, så ovenstående opfyldes?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Læs også: Tænkeboks: Planlæg en skattejagt\n\nNår ingen af holdene må besøge de samme to poster efter hinanden, må holdene både starte og slutte på hver sin post.\n\nHerefter kræver det kun lidt kombination at nå frem til en løsning, for eksempel:\n\nIllustration: Ingeniøren.\n\nIllustration: Ingeniøren."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    }
+  ]
+}

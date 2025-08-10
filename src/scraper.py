@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from typing import List, Optional, Tuple, Dict
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from bs4 import BeautifulSoup
 
 
@@ -13,6 +15,29 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/125.0 Safari/537.36"
 )
+
+_session: Optional[requests.Session] = None
+
+def _get_session() -> requests.Session:
+    global _session
+    if _session is None:
+        sess = requests.Session()
+        retry = Retry(
+            total=4,
+            backoff_factor=0.5,
+            status_forcelist=(429, 500, 502, 503, 504),
+            allowed_methods=("GET",),
+            respect_retry_after_header=True,
+        )
+        sess.headers.update({
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+        })
+        adapter = HTTPAdapter(max_retries=retry)
+        sess.mount("https://", adapter)
+        sess.mount("http://", adapter)
+        _session = sess
+    return _session
 
 
 @dataclass
@@ -23,11 +48,7 @@ class Article:
 
 
 def fetch_url(url: str, timeout: int = 20) -> str:
-    response = requests.get(
-        url,
-        headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml"},
-        timeout=timeout,
-    )
+    response = _get_session().get(url, timeout=timeout)
     response.raise_for_status()
     return response.text
 
@@ -312,15 +333,25 @@ def get_latest_taenkeboksen_articles(limit: int = 5) -> List[Article]:
 
     selected = links[: max(limit, 5)]  # sørg for mindst 5
 
-    articles: List[Article] = []
-    for url in selected:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def _load(url: str) -> Optional[Article]:
         try:
             html = fetch_article_html(url)
             soup = BeautifulSoup(html, "lxml")
             title = _extract_title(soup)
-            articles.append(Article(title=title, url=url, html=html))
+            return Article(title=title, url=url, html=html)
         except Exception as exc:
             logging.error("Fejl ved hentning af artikel %s: %s", url, exc)
+            return None
+
+    articles: List[Article] = []
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        futures = {ex.submit(_load, url): url for url in selected}
+        for fut in as_completed(futures):
+            art = fut.result()
+            if art is not None:
+                articles.append(art)
 
     return articles
 
