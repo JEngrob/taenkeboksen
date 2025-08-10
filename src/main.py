@@ -50,6 +50,16 @@ def main() -> None:
     parser.add_argument("--out-json", dest="out_json", default=None, help="Gem resultat som JSON til denne sti")
     parser.add_argument("--stage", dest="stage", choices=["scrape", "solve", "evaluate", "site", "all"], default="all", help="Kør kun en del: scrape|solve|evaluate|site|all")
     parser.add_argument("--one", dest="one_index", type=int, default=None, help="Kør løsning/evaluering kun for opgave med index (1-baseret)")
+    parser.add_argument("--limit", dest="limit", type=int, default=120, help="Max antal artikler at overveje fra listings")
+    parser.add_argument("--max-pages", dest="max_pages", type=int, default=12, help="Max antal pagination-sider pr. listing")
+    parser.add_argument("--cache", dest="cache", default=None, help="Aktivér HTTP-cache (filesystem/sqlite). Eksempel: .cache/http")
+    parser.add_argument("--cache-expire", dest="cache_expire", type=int, default=None, help="Cache TTL i sekunder")
+    parser.add_argument("--cache-backend", dest="cache_backend", default="filesystem", help="Cache-backend: filesystem eller sqlite (sqlite kan låse ved concurrency)")
+    parser.add_argument("--timeout", dest="timeout", type=int, default=20, help="HTTP-timeout i sekunder")
+    parser.add_argument("--rate-limit", dest="rate_limit", type=int, default=0, help="Rate limit i millisekunder mellem requests")
+    parser.add_argument("--workers", dest="workers", type=int, default=6, help="Antal parallelle hentere for artikler")
+    parser.add_argument("--model", dest="model", default=None, help="Overstyr OPENAI_MODEL for denne kørsel")
+    parser.add_argument("--log-level", dest="log_level", default="INFO", help="Log-niveau (DEBUG, INFO, WARNING, ERROR)")
     args = parser.parse_args()
 
     def progress(prefix: str, i: int, n: int) -> None:
@@ -60,10 +70,23 @@ def main() -> None:
     def progress_done() -> None:
         print("\r", end="\n", flush=True)
 
+    # Konfigurer logniveau
+    logging.getLogger().setLevel(getattr(logging, args.log_level.upper(), logging.INFO))
+
+    # Konfigurer scraper
+    scraper.configure(
+        cache_path=args.cache,
+        cache_expire=args.cache_expire,
+        cache_backend=args.cache_backend,
+        timeout_sec=args.timeout,
+        rate_limit_ms=args.rate_limit,
+        max_workers=args.workers,
+    )
+
     target_count = 10
     logging.info("Finder %s reelle opgaver med løsning …", target_count)
     # Hent mange Tænkeboksen-artikler (nyeste først)
-    raw_articles = scraper.get_latest_taenkeboksen_articles(limit=120)
+    raw_articles = scraper.get_latest_taenkeboksen_articles(limit=args.limit, max_pages=args.max_pages, max_workers=args.workers)
     if not raw_articles:
         logging.error("Fandt ingen artikler. Afbryder.")
         return
@@ -124,7 +147,7 @@ def main() -> None:
             done = 0
             for i in run_range:
                 try:
-                    raw = solve_task(tasks_text[i])
+                    raw = solve_task(tasks_text[i], model=args.model)
                     data = parse_solver_json(raw)
                     if data:
                         structured_solutions[i] = data

@@ -13,17 +13,17 @@ Notation:
 ## 1) Scraping – performance og robusthed
 - [x] `requests.Session` med retries/backoff og timeouts
 - [x] Parallel artikelhentning (IO-bound)
-- [ ] Caching af HTML (TTL), konfig via flag/ENV
-- [ ] Polite crawling: rate limiting og respekt for 429/Retry-After
-- [ ] Smartere pagination-stop (cutoff-dato / 2 tomme sider i træk)
+- [x] Caching af HTML (TTL), konfig via flag/ENV (opt-in; default filesystem-backend)
+- [x] Polite crawling: rate limiting og respekt for 429/Retry-After (global throttling)
+- [x] Smartere pagination-stop (cutoff: 2 tomme sider i træk)
 
 Accept: Kørsel på 10–20 artikler er stabil, hurtig og uden unødige kald.
 
 ## 2) Parsing og parring af opgave/løsning
-- [ ] Udvid løsning-detektor: også “Facit”, “Svar:”, “Sådan løses…”
+- [x] Udvid løsning-detektor: også “Facit”, “Svar:”, “Sådan løses…”
 - [ ] Kombinér “i+1”-heuristik med `bagsidens svar`-opslag pr. opgavenummer
 - [ ] Bedre rensning af brødtekst; fjern nav/footer/relaterede links
-- [ ] AMP/Wayback-normalisering; behold original URL i metadata
+- [x] AMP/Wayback-normalisering; behold original URL i metadata
 
 Accept: ≥90% korrekt parring på et prøveudsæt; manuel spotcheck OK.
 
@@ -46,7 +46,7 @@ Accept: ≥95% vellykket parse; evaluatorens dom er stabil ved gentagelser.
 Accept: JSON/HTML/CSV er konsistente og dokumenterede.
 
 ## 5) CLI og UX
-- [ ] Flags: `--limit`, `--since`, `--max-pages`, `--cache`, `--model`, `--rate-limit`, `--log-level`, `--timeout`
+- [x] Flags: `--limit`, `--since`, `--max-pages`, `--cache`, `--cache-backend`, `--cache-expire`, `--model`, `--rate-limit`, `--workers`, `--log-level`, `--timeout`
 - [ ] Progress/logging med `rich`/`tqdm`
 - [ ] Forbedr `bagside`: Enter=default run, Ctrl-C håndtering, husk sidste valg
 - [ ] `--one` virker også for `evaluate` og `site`
@@ -76,8 +76,9 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 - [x] 1. Parallel artikelhentning + Session retries
 - [x] 2. Robust LLM-JSON + evaluatorscore
 - [x] 3. Udvidet JSON-output + dataklasser
-- [ ] 4. Caching + rate limiting
+- [x] 4. Caching + rate limiting (opt-in cache; default filesystem-backend)
 
 ## Seneste status
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
+- 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor.

@@ -1,19 +1,19 @@
 {
-  "generated_at_iso": "2025-08-10T08:05:50",
+  "generated_at_iso": "2025-08-10T08:24:46",
   "items": [
     {
       "task": {
-        "title": "Find alderen på Peters mor | Ingeniøren",
-        "url": "https://ing.dk/artikel/find-alderen-paa-peters-mor",
-        "number": 282,
-        "text": "Opgave 282:\n\nPeters mor har fødelsdag, og i den anledning har Peter fået lov til at invitere nogle gæster med til middagen – heriblandt tre personer, som hans mor ikke kender.\n\nUnder middagen spørger hun interesseret til deres alder, men Peter kommer dem  i forkøbet og foreslår, at hun skal gætte den. Som hjælp fortæller han, at produktet af de tre aldre er 2450. Han oplyser yderligere, at ingen af de tilstedeværende er under to år, og at moderen er dagens eneste fødselar.\n\nPeters mor tænker lidt over dette, men må konstatere, at de givne oplysninger langtfra er tilstrækkelige til, at hun kan give et entydigt svar, og hun beder derfor Peder om yderligere hjælp.\n\nPeter medgiver, at der må nogle flere facts til, og han oplyser derfor, at de tre gæster tilsammen er dobbelt så gamle som han selv. Efter endnu en tænkepause må Peters mor dog konstatere, at hun stadig ikke kan løse opgaven.\n\nPeter anerkender problemet og indvilger derfor i at give en sidste og afgørende oplysning, nemlig at moderen er den ældste af dem alle.\n\n»Hvis det er tilfældet, er der ikke længere noget at være i tvivl om,« siger Peters mor og oplyser herefter den korrekte alder på de tre gæster."
+        "title": "Mål et reb med abens mors alder | Ingeniøren",
+        "url": "https://ing.dk/artikel/maal-et-reb-med-abens-mors-alder",
+        "number": 104,
+        "text": "Opgave 104:\n\nEt reb hænger i en talje. Et lod er bundet i rebets ene ende, mens en abe hænger i den anden. Rebet er lige langt i begge sider, og der er ligevægt.\n\nRebet vejer 250 g pr. meter. Aben og dens mor er tilsammen fire år gamle, og aben vejer lige så mange kg som morens alder er i år.\n\nSå kommer det svære: Abens mor er dobbelt så gammel, som aben var, da dens mor var halvt så gammel, som aben vil være, når den er tre gange så gammel, som  dens mor var, da hun var tre gange så gammel som aben.\n\nVægten af hele rebet plus loddet i enden er halvanden gang så meget som forskellem mellem loddets vægt og loddets og abens vægt.\n\nHvor langt er rebet?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Peters mor var 17 år gammel, da hun fødte Peter.\n\n2450 kan faktoriseres på 11 måder, hvoraf to har den samme sum og dermed ­giver samme alder for Peter – nem-lig 5+10+49 og 7+7+50.\n\nDem skal moderen vælge imellem ud fra sin alder, som er højere end alle andres. Det kan kun betyde, at hun netop fylder 50 år.\n\nPeters alder er 32 år, men han er desuden nogle dage gammel, eftersom kun moderen har fødselsdag. Hun var derfor kun 17 år, da hun fødte ham."
+        "text": "Rebet er 5 meter langt. Løsningen involverer i alt 14 ligninger, som heldigvis er ganske simple at løse. Husk, at når abens mor bliver et antal år ældre, så gør aben det naturligvis også.\n\nDet fører (efter nogle mellemregninger) til, at aben nu er halvandet år gammel, mens dens mor er to et halvt år. Så vejer aben 2,5 kg, og rebet det halve (ifølge den kryptiske formulering i opgavens sidste afsnit). Dermed er det 5 meter langt."
       },
       "evaluation": {
         "text": null,
@@ -23,17 +23,17 @@
     },
     {
       "task": {
-        "title": "Del 13 volt med seks modstande | Ingeniøren",
-        "url": "https://ing.dk/artikel/del-13-volt-med-seks-modstande",
-        "number": 264,
-        "text": "Opgave 264:\n\nMax fandt et gammelt kredsløb med to ledninger ind og to ud. Når der er 13 V på indgangen, er der netop 1 V (ubelastet) på udgangen.\n\nDesværre var kredsløbet brændt sammen, så Max kunne ikke se, hvordan modstandene var forbundet. Men der var seks modstande på hver 10 Ohm, og de var ikke så store, så det gælder om at finde det kredsløb, hvor modstandene belastes mindst."
+        "title": "Smid lasten over bord | Ingeniøren",
+        "url": "https://ing.dk/artikel/smid-lasten-over-bord",
+        "number": 279,
+        "text": "Opgave 279:\n\nEn pram er 5 meter lang og 4 meter bred og flyder i en lille, cirkulær sø, der har diameteren 101,5 meter og (for enkelhedens skyld) lodrette sider. I prammen sidder fire ­personer, som gerne vil spille kort, selvom der faktisk ikke er plads nok til det.\n\nDerfor smider de lasten over bord: 7,5 ton sten og 3,93 ton jernkæde samt to tomme, lukkede olietønder på hver 50 kg. Stenene og kæden ryger til bunds, mens tønderne flyder.\n\nHvor meget stiger vandstanden i den lille sø?\n\nFor at kunne regne det ud skal I lige vide, at stenenes massefylde er 2,5 kg, og jernkædens massefylde 7,86 i forhold til vands."
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Mindst mulige belastning af mostandene er 2,5 W – og i det bedste kredsløb på tegningen er det naturligvis de to modstande ved indgangen, som belastes mest."
+        "text": "Vandstanden i den lille sø falder 0,98 mm, når de ­fire mænd smider sten, kæde og tønder over bord fra deres pram. Så vandet stiger altså ikke, selvom opgaveteksten drilsk havde antydet det.\n\nForklaringen er helt ­efter gode gamle Arkimedes og hans lov. Når tingene ligger i båden (som flyder), fortrænger de vand svarende til deres vægt. Når de smides over bord (og går til bunds), fortrænger de kun vand svarende til deres rumfang.\n\nTønderne flyder i begge tilfælde, så de ændrer ikke vandstanden i søen. Sten plus kæde vejer 11,43 ton (svarende til 11.430 liter vand), men fylder kun 3,5 kubikmeter (svarende til 3.500 liter). Ergo fortrænger de 7.930 liter vand mindre, og delt med søens areal giver det en lille millimeter lavere vandstand."
       },
       "evaluation": {
         "text": null,
@@ -43,17 +43,17 @@
     },
     {
       "task": {
-        "title": "Beregn Børges baghave | Ingeniøren",
-        "url": "https://ing.dk/artikel/beregn-boerges-baghave",
-        "number": 280,
-        "text": "Opgave 280:\n\nBørge ­opdagede, at hans grund kan inddeles fuldstændigt i 13 kvadrater som vist på tegningen. Det mindste, sorte kvadrat er netop 1 kvadratmeter. Hvor stor er så hele Børges grund?"
+        "title": "Tæl de forskellige knus | Ingeniøren",
+        "url": "https://ing.dk/artikel/tael-de-forskellige-knus",
+        "number": 151,
+        "text": "Opgave 151:\n\nClaus og hans kæreste har været til selskab med fire andre par. Der blev udvekslet velkomstknus, og senere spurgte Claus hver enkelt af de ni andre, hvor mange de havde knuset.\n\nDer var sjovt nok ni forskellige tal, og der var ingen, som havde knuset deres egen partner. Men hvor mange personer havde Claus’ kæreste knuset?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Børges grund er 933 ⅓ kvadratmeter stor. Den løsning findes ved at kalde et par kvadratsider x og y og derefter successivt opstille alle sammenhængene mellem kvadraternes sidelængder. På den måde ender man med to ligninger med to ubekendte.\n\nVælger vi for eksempel de to kvadrater lige til højre for den sorte firkant og kalder deres sider for x og y, så kan vi bevæge os rundt i Børges have nedefter og mod venstre og får udtrykt sidelængden af det midterste kvadrat foroven som 3x-y+6. Ergo har vi ligningen 3x-y+6 = x+y.\n\nPå tilsvarende vis kan vi bevæge os nedad fra midten af haven og rundt til højre, hvorved vi får 26x-15y+15 = x+y. Når de to ligninger er løst, finder vi grundens sidelængder til 25 meter og 37 ⅓ meter og deraf arealet."
+        "text": "Claus’ kæreste har knuset fire personer (og det er sjovt nok de samme, som Claus har knuset).\n\nIngen har knuset mere end 8 personer, altså har de 9 personer ud over Claus hver knuset 0 til 8 personer – og vi kalder dem P0, P1, ..., P8, efter hvor mange de har knuset.\n\nP8 har knuset P1-P7 samt Claus. Så er P0 og P8 partnere, og P1 har brugt sin kvote. P7 har knuset P2-P6 samt P8 og Claus, så nu har P2 brugt sin kvote, og P1 og P7 er partnere.\n\nFortsætter vi på den måde, bliver parrene P2 og P6, P3 og P5 samt P4 og Claus."
       },
       "evaluation": {
         "text": null,
@@ -63,17 +63,17 @@
     },
     {
       "task": {
-        "title": "Saml din egen fodbold | Ingeniøren",
-        "url": "https://ing.dk/artikel/saml-din-egen-fodbold",
-        "number": 356,
-        "text": "Opgave 356:\n\nMan kan dække en kugle med regulære femkanter og sekskanter, som samles, så de mødes tre og tre i hvert hjørne (og hverken overlapper eller har huller). Det er for eksempel sådan, en almindelig læderfodbold er lavet.\n\nHvor mange femkanter skal der bruges?"
+        "title": "Find det største heltal | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-det-stoerste-heltal",
+        "number": 373,
+        "text": "Opgave 373:\n\nVi har fem heltal. Adderer vi forskellige af disse tal to og to, får vi totalt set følgende forskellige summer: 637, 669, 794, 915, 919, 951, 1040, 1072 og 1197. Hvad er det største af de fem heltal?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Når man skal dække en kugle med regulære fem- og sekskanter, skal man altid bruge netop 12 femkanter. Det gælder sjovt nok uanset kuglens størrelse (og dermed antallet af sekskanter).\n\nFor at løse opgaven skal vi bruge Eulers regel: flader + hjørner = kanter + 2.\n\nHvis vi bruger f femkanter og s sekskanter, bliver antal flader f+s, og antal hjørner er (5f+6s)/3, idet netop tre af ‘5/6-kanterne’ skal mødes i hvert hjørne. Antal kanter er (5f+6s)/2. Eulers regel siger da f + s + (5f+6s)/3 = (5f+6s)/2 + 2 ­eller 8f/3 + 3s = 5f/2 + 3s + 2, hvoraf F = 12."
+        "text": "Det største af de fem heltal er 659. Lad os kalde de fem heltal for a, b, c, d og e, hvor a er mindst og e størst.\n\nDe må alle være forskellige, for ellers var der færre end ni forskellige summer. Omvendt er der to talpar, som har den samme sum, idet der er ti ­forskellige talpar.\n\nVi ved nu, at d+e er den største sum, og c+e den næststørste. Altså er c+d+2e = 2269. 2e er lige, så c+d må være ulige.\n\nDet betyder, at 1040 ikke kan være c+d, men må være b+e. c+d kan nu være 951 eller 919, og regner vi videre på de to muligheder, viser det sig, at 951 er den rigtige. Det kan vi indsætte i den første ligning, hvor vi får, at 2e = 1318 eller e = 659."
       },
       "evaluation": {
         "text": null,
@@ -83,17 +83,17 @@
     },
     {
       "task": {
-        "title": "Tæl til 12 med regnestykker | Ingeniøren",
-        "url": "https://ing.dk/artikel/tael-til-12-med-regnestykker",
-        "number": 224,
-        "text": "Opgave 224:\n\nHer er et smart regnestykke, hvor hvert bogstav står for et ciffer, positivt eller negativt (altså mellem -9 og 9). Ingen af bogstaverne står for det samme ciffer."
+        "title": "Saml et gulvtæppe | Ingeniøren",
+        "url": "https://ing.dk/artikel/saml-et-gulvtaeppe",
+        "number": 323,
+        "text": "Opgave 323:\n\nEn tæppehandler har to tæpper, et på 1 gange 8 meter og et på 10 gange 10 meter. De skal dække et gulv, som er 9 gange 12 meter, og det er jo i sig selv ikke særlig svært.\n\nDet svære er, at man kun må skære et eneste snit i et af de to tæpper. Derefter skal de nu tre stykker passe til gulvet. Hvordan gør man det?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Y=-9, R=-8, Ø=-7, M=-5, J=-3, A=-2, N=-1, T=0, E=1, O=2, V=3, I=4, D=5, L=6, S=7 og F=8."
+        "text": "Tæppeopgaven kræver godt nok et langt og besværligt snit, der næppe ville være brugbart i virkelighedens verden. Men i vores trygge og begrænsede matematiske omgivelser er der ingen tvivl: Bare del tæppet på 10 gange 10 meter i to ens dele som vist på tegningen.\n\nSå kan det sorte stykke forskydes et ‘trappetrin’ til højre og nedad, hvorved et hul på 1 gange 8 meter dukker op i midten – lige netop hvad det lille tæppe kan udfylde. Og gulvet på 9 gange 12 meter dækkes som krævet."
       },
       "evaluation": {
         "text": null,
@@ -103,17 +103,17 @@
     },
     {
       "task": {
-        "title": "Put ti tal på plads | Ingeniøren",
-        "url": "https://ing.dk/artikel/put-ti-tal-paa-plads",
-        "number": 322,
-        "text": "Opgave 322:\n\nCifrene fra 0 til 9 er repræsenteret ved ti forskellige symboler, som udmærker sig ved at ligne hinanden bortset fra deres ‘retning’.\n\nSymbolerne er nu stillet op i et mærligt regnestykke, hvor tallene i rammen skal kunne lægges sammen på alle fire ledder og give resultaterne vist udenfor.\n\nDet drilske er, at når figuren drejes, ændrer symbolerne sig. Set fra højre står der for eksempel:"
+        "title": "Betal med Haha, Aha og Ah | Ingeniøren",
+        "url": "https://ing.dk/artikel/betal-med-haha-aha-og-ah",
+        "number": 113,
+        "text": "Opgave 113:\n\nI landet Primtalien har man kun tre mønter med navnene Haha, Aha og Ha. Deres værdi er 5, 7 og 13. Det er klart, at småbeløbene 1, 2, 3 og 4 ikke kan betales i Primtalien. Men hvad er det største beløb, man ikke kan betale med de tre mønter?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Cifrene 0123456789 svarer til tegnene ⇒↔∩∪↕⊂⊃⇑⇓⇐.\n\nDet  er lidt svært at forstå det med at dreje figuren og se regnstykkerne, og for det andet er tegnet ⇓ slet ikke med i regnestykkerne. Men bortset fra disse indledende besværligheder er der bare tale om at pusle løs, indtil løsningen er der.\n\nNår de fire additioner er stillet op, kan man starte med at udelukke cifferet 0, som alt andet end ⇒ eller ⇓. 9 kan ikke stå som første ciffer inde i firkanten osv. osv."
+        "text": "Beløbet 16 er det største, man ikke kan betale i Primtalien. De andre umulige beløb er 1, 2, 3, 4, 6, 8, 9 og 11.\n\nEfter 16 kan både 17, 18, 19, 20 og 21 lade sig gøre – og alle større beløb kan også klares ved at lægge flere femmere til."
       },
       "evaluation": {
         "text": null,
@@ -123,17 +123,17 @@
     },
     {
       "task": {
-        "title": "Find gevinsten på den enarmede | Ingeniøren",
-        "url": "https://ing.dk/artikel/find-gevinsten-paa-den-enarmede",
-        "number": 412,
-        "text": "Opgave 412:\n\nEn lidt speciel enarmet tyve­knægt har fem ruder, som hver med lige stor sandsynlighed viser et af cifrene fra 0 til 9.\n\nGevinsten udregnes herefter som produktet af de fem viste cifre – og udbetales i øre. Maksimalt kan man altså vinde 9 · 9 · 9 · 9 · 9 = 59049 øre ved et spil – og bare én af ruderne viser 0, vinder man ingenting.\n\nHvor stor skal indsatsen være på denne enarmede tyveknægt, for at det går lige op med den forventede gevinst på langt sigt?"
+        "title": "Bestem en firkantet talrække | Ingeniøren",
+        "url": "https://ing.dk/artikel/bestem-en-firkantet-talraekke",
+        "number": 202,
+        "text": "Opgave 202:\n\nHer er en talrække, som følger et bestemt system. Det første tal er 111, og det sidste 2008, og nogle af tallene derimiellem kunne erstattes med andre – men at der er 19 tal, det ligger fast!\n\n111, 117, 141, 211, 317, 412, 551, 647, 726, 844, 1057, 1233, 1329, 1528, 1609, 1838, 2002, 2006, 2008 – hvad er systemet i den række?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Spilleautomaten giver i gennemsnit 1.845,28 øre i gevinst pr. spil. Så hvis ikke maskinens ejer skal tabe penge på den på langt sigt, skal indsatsen være 1.846 øre.\n\nIdet hver rude kan vise et af cifrene fra 0 til 9, viser den enarmede tyveknægt i alt 100.000 forskellige værdier i ruderne. Hver gang er gevinsten produktet af de fem cifre, og den gennemsnitlige gevinst er derfor summen af alle produkterne divideret med 100.000.\n\nDer er heldigvis en lettere måde at regne det ud på, for vi kan i stedet tage ­produktet af alle summerne, altså (0+1+2+3+4+5+6+7+8+9)5. Gevinsten bliver derfor i snit 455/105 = 1.845,28 øre."
+        "text": "De mærkelige tal er såmænd klokkeslæt på et digitalur. Og systemet i talrækken er et stigende antal tændte segmenter på de sædvanlige firkantede displays i sådanne ure.\n\n1:11 består af 6 tændte segmenter, 1:17 af 7 – og så fortsætter vi opad indtil 20:08, som kan præstere hele 24 tændte lysstriber. Færre end 6 eller flere end 24 segmenter kan vi ikke opnå med virkelige klokkeslæt."
       },
       "evaluation": {
         "text": null,
@@ -143,17 +143,17 @@
     },
     {
       "task": {
-        "title": "Tæl fiskerens fangst | Ingeniøren",
-        "url": "https://ing.dk/artikel/tael-fiskerens-fangst",
-        "number": 370,
-        "text": "Opgave 370:\n\nEn fisker har fanget et antal fisk. De tre tungeste vejer tilsammen 35 procent af fangstens samlede vægt. Dem sælger han. Herefter udgør de tre letteste fisk tilsammen 5/13 af resten – igen efter vægt naturligvis."
+        "title": "Byg en plankebro | Ingeniøren",
+        "url": "https://ing.dk/artikel/byg-en-plankebro",
+        "number": 281,
+        "text": "Opgave 281:\n\nI denne opgave gælder det om at komme over en 1,6 meter bred grøft ved hjælp af smalle planker på 1,5 meters længde, når det ikke er tilladt at bruge andet end plankerne. Hvor få planker kan man klare sig med?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Fiskeren fangede ti fisk. Vi omregner vægten af de tre letteste fisk til procent – og 5/13 af 65 procent er 25 procent. Altså vejer de tre letteste fisk i gennemsnit hver 8,33 procent af fangsten, og de tre tungeste vejer i snit 11,67 procent.\n\nDe resterende fisk ­vejer tilsammen 40 procent af fangsten, og det kan kun passe, hvis der er fire, som i snit vejer 10 procent. Fem fisk ville betyde, at mindst én af dem var lettere end de letteste fisk, og tre fisk ville tilsvarende være for tunge. Ergo fangede fiskeren 3+4+3 = 10 fisk."
+        "text": "Man kan komme over grøften med kun tre af de for korte planker. For eksempel sådan som tegningen viser.\n\nMan kan selvfølgelig klare sig med to planker, hvis man snyder, og grøften ikke er alt for dyb. Lad simpelthen en planke gå fra den ene bred og ned til bunden af grøften. Så kan den anden planke nå fra den modsatte bred og over til den første planke.\n\nOg har man en ven til at holde den ene ende af planken, kan man sågar nøjes med én. Men det er også snyd.\n\nSe flere Tænkeboks-opgaver her"
       },
       "evaluation": {
         "text": null,
@@ -163,17 +163,17 @@
     },
     {
       "task": {
-        "title": "Tænkeboks: Find terningens modstand | Ingeniøren",
-        "url": "https://ing.dk/artikel/taenkeboks-find-terningens-modstand",
-        "number": 80,
-        "text": "Opgave 80:\n\nEn terning er opbygget af 12 metaltråde, som hver har modstanden 1 Ohm.\n\nHvad er den samlede modstand mellem to af terningens diagonalt modsatte hjørner?"
+        "title": "Hjælp Børges søn med lommepengene | Ingeniøren",
+        "url": "https://ing.dk/artikel/hjaelp-boerges-soen-med-lommepengene",
+        "number": 144,
+        "text": "Opgave 144:\n\nBørges søn bad om ekstra lommepenge, men det syntes Børge, at han først skulle gøre sig fortjent til. Han gav derfor sønnen 10 røde og 10 grønne kugler, som bortset fra farven var ganske ens.\n\n»Fordel nu kuglerne i mine to lommer,« sagde Børge. »Læg dem helt, som du synes – der behøver ikke være lige mange i hver lomme. Så vender du ryggen til, og jeg bytter måske om på de to lommers indhold.\n\nDu vælger derefter en af mine lommer, og i den trækker du én kugle. Er den grøn, får du flere lommepenge, er den rød, får du ingen.«\n\nBørges søn kunne godt gennemskue, at han ikke kunne være sikker på flere lommepenge. Men hvordan skal han fordele kuglerne i Børges lommer for at have de bedste chancer?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Læs også: Tænkeboks: Find terningens modstand\n\n5/6 Ohm er terningens modstand. Fra hjørnet går tre tråde, som hver deler sig i to, og de samles igen to og to til tre tråde til det modsatte hjørne. Da alt er symmetrisk, har vi samme spænding efter de tre første tråde og kan derfor samle de tre hjørner. Samme med de tre sidste tråde.\n\nVi har altså først tre parallelforbundne tråde, dernæst seks og til slut igen tre. Samlet modstand: 1/3 Ohm + 1/6 Ohm + 1/3 Ohm.\n\nIllustration: Ingeniøren."
+        "text": "Børges søn har de bedste chancer for flere lommepenge, hvis han lægger en grøn kugle i den ene af Børges lommer og resten i den anden lomme. Så er chancen for at trække en grøn kugle fra en tilfældig af lommerne knap 74%."
       },
       "evaluation": {
         "text": null,
@@ -183,17 +183,17 @@
     },
     {
       "task": {
-        "title": "Tænkeboks: Planlæg en skattejagt | Ingeniøren",
-        "url": "https://ing.dk/artikel/taenkeboks-planlaeg-en-skattejagt",
-        "number": 120,
-        "text": "Opgave 120:\n\nSeks hold på en skattejagt skal finde seks poster. Holdene starter fra hver sin post og skal siden løbe hver sin rute til de andre poster.\n\nFor at et hurtigt hold ikke kan indhente et langsomt hold og se, hvor næste post er, må ingen af holdene besøge de samme to poster lige efter hinanden.\n\nHvordan skal holdene løbe, så ovenstående opfyldes?"
+        "title": "Find kaptajnens navn | Ingeniøren",
+        "url": "https://ing.dk/artikel/find-kaptajnens-navn",
+        "number": 20,
+        "text": "Opgave 20:\n\nTre passagerer på et skib hedder Jørgensen, Hansen og Nielsen. Det samme gør tre besætningsmedlemmer."
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Læs også: Tænkeboks: Planlæg en skattejagt\n\nNår ingen af holdene må besøge de samme to poster efter hinanden, må holdene både starte og slutte på hver sin post.\n\nHerefter kræver det kun lidt kombination at nå frem til en løsning, for eksempel:\n\nIllustration: Ingeniøren.\n\nIllustration: Ingeniøren."
+        "text": "Kaptajnen hedder Jørgensen.\n\nVi starter med at se på linedanseren, som må bo i Farum. Da passager Nielsen bor i Kerteminde, og Hansen lider af svimmelhed, må linedanseren hedde Jørgensen. Så må passager Hansen bo i Horsens, og styrmanden hedde Hansen.\n\nDa maskinmesteren ikke hedder Jørgensen, må det være kaptajnens navn."
       },
       "evaluation": {
         "text": null,
