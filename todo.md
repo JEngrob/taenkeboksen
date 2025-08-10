@@ -7,8 +7,8 @@ Notation:
 ## 0) Opsætning og housekeeping
 - [ ] `.env.example` med `OPENAI_API_KEY` og valgfri `OPENAI_MODEL`
 - [ ] Pin afhængigheder eller `pip-tools` for reproducérbarhed
-- [ ] Skift til `pyproject.toml` + `console_scripts` for CLI (`bagside`)
-- [ ] `pre-commit` med `ruff`, `black`, `mypy` (konfig i repo)
+- [x] Skift til `pyproject.toml` + `console_scripts` for CLI (`bagside`)
+- [x] `pre-commit` med `ruff`, `black`, `mypy` (konfig i repo)
 
 ## 1) Scraping – performance og robusthed
 - [x] `requests.Session` med retries/backoff og timeouts
@@ -39,8 +39,8 @@ Accept: ≥95% vellykket parse; evaluatorens dom er stabil ved gentagelser.
 ## 4) Data- og outputstruktur
 - [x] Indfør dataklasser: `Task`, `OfficialSolution`, `ProposedSolution`, `Evaluation`, `RunResult`
 - [x] Udvid JSON-output: titel, URL, nr., struktureret svar, evaluering, tidsstempler
-- [ ] Flyt HTML til templating (fx Jinja2)
-- [ ] Tilføj søgning/filtrering i site (simpel JS)
+- [x] Flyt HTML til templating (Jinja2)
+- [x] Tilføj søgning/filtrering i site (simpel JS)
 - [x] CSV-eksport for flad analyse
 
 Accept: JSON/HTML/CSV er konsistente og dokumenterede.
@@ -83,4 +83,4 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
 - 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor; fallback-parring; CSV; parallel evaluate.
-- 2025-08-10: Løste resterende parsing/rensning, rich progress, CSV-menu, paywall-debug dump; dokumentation opdateret.
+- 2025-08-10: Skift til pyproject + console script; pre-commit tilføjet; Jinja2 templating + søgefelt i site; rich progress; støjfiltre udvidet.

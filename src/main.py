@@ -448,7 +448,7 @@ def main() -> None:
         logging.info("Markdown rapport gemt: %s", out_path)
 
     if args.out_html:
-        # Byg HTML uden .format for at undgå konflikt med CSS-braces
+        # Prøv Jinja2 template først; fallback til inline HTML hvis template mangler
         logging.info("Bygger HTML website …")
         nav_pills_parts = []
         for i, art in enumerate(articles):
@@ -461,6 +461,20 @@ def main() -> None:
             section.replace("<section class=\"task\">", f"<section id=\"task-{i+1}\" class=\"task\">")
             for i, section in enumerate(html_sections)
         )
+
+        rendered = None
+        try:
+            from jinja2 import Environment, FileSystemLoader, select_autoescape  # type: ignore
+            templates_dir = project_root / "reports" / "site_templates"
+            env = Environment(loader=FileSystemLoader(str(templates_dir)), autoescape=select_autoescape(["html"]))
+            template = env.get_template("index.html.j2")
+            rendered = template.render(
+                generated=datetime.now().isoformat(timespec="seconds"),
+                nav_pills=nav_pills,
+                body=body,
+            )
+        except Exception:
+            rendered = None
 
         html_parts = [
             "<!doctype html>",
@@ -505,7 +519,7 @@ def main() -> None:
             "</body>",
             "</html>",
         ]
-        html = "\n".join(html_parts)
+        html = rendered if rendered is not None else "\n".join(html_parts)
 
         out_html_path = Path(args.out_html)
         out_html_path.parent.mkdir(parents=True, exist_ok=True)
