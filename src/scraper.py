@@ -296,6 +296,11 @@ def _should_drop_line(line: str) -> bool:
         "du skal være logget ind for at følge et emne",
         "del artiklen",
         "annonc",
+        "relaterede artikler",
+        "læs også",
+        "se også",
+        "kommentarer",
+        "bliv abonnent",
     ]
     return any(s in low for s in drop_substrings)
 

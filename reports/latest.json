@@ -1,79 +1,19 @@
 {
-  "generated_at_iso": "2025-08-10T08:34:27",
+  "generated_at_iso": "2025-08-10T08:44:39",
   "items": [
     {
       "task": {
-        "title": "Hvorfor vinder naboen i lotto? | Ingeniøren",
-        "url": "https://ing.dk/artikel/hvorfor-vinder-naboen-i-lotto",
-        "number": 220,
-        "text": "Opgave 220:\n\nMeget tit er der nabotal blandt de ni udtrukne tal i lotto. Men hvad er egentlig sandsynligheden for, at der ikke er nabotal blandt de ni udtrukne tal (syv vindertal og to tillægstal), trukket blandt tallene 1-36?"
+        "title": "Hjælp den dødsdømte | Ingeniøren",
+        "url": "https://ing.dk/artikel/hjaelp-den-doedsdoemte",
+        "number": 225,
+        "text": "Opgave 225:\n\nEn dødsdømt får en sidste chance. Han skal vælge mellem to døre fra cellen – den ene fører til friheden, den anden til galgen.\n\nHan må stille ét spørgsmål om dørene til sine to fangevogtere. Den ene taler altid sandt, den anden lyver altid – og den dødsdømte ved ikke, hvem som gør hvad.\n\nKan den dødsdømte finde den rigtige dør og redde livet?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Vi undgår kun nabotal blandt de ni udtrukne lottotal u 7,3 procent af trækningerne."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
-        "title": "Skyd genvej til Harvard | Ingeniøren",
-        "url": "https://ing.dk/artikel/skyd-genvej-til-harvard",
-        "number": 210,
-        "text": "Opgave 210:\n\nOversat til dansk kan vi her bringe en del af adgangs­eksamen til Harvard University, så nu kan du få lejlighed til at prøve kræfter med amerikansk tankegang.\n\nA) 29 b. i a. B) V. 7 v. C) 1001 n. e. D) De 12 a. h. E) 52 k. i et s. k. F) 9 p. i s.s. G) 88 t. på et f. H) 4 r. f. på det d. f. I) 100 g. er v. k.p. J) 18 h. på en g.b. K) 90 g. i en r. v. L) 2000 k. for at p. s. i M. M) 3 s. på en a.t. N) 144 s. på en g. O) 4 k. på en h. P) 24 t. på et d. Q) 1 h. på en e. R) 4 c. i et p.n. S) 7 f. f. af K. B. T) 11 s. på et f.h. U) 2 f. i det d.f. V) 29 d. i f. ved s.å. W) 60 s. på et m. X) 40 d. og n. i den s. s.f. Y) 7 d. på en u. Z) 3 s. g. Æ) 7 b. og t. på en n.p. Ø) 6 s. i en h. Å) 30 f. f. og u. i G. D."
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "A) 29 bogstaver i alfabetet\n\nB) Verdens 7 vidundere\n\nC) 1.001 nats eventyr\n\nD) De 12 astrologiske himmeltegn\n\nE) 52 kortblade i et spil kort\n\nF) 9 planeter i solsystemet\n\nG) 88 tangenter på et flygel\n\nH) 4 røde firkanter på det danske flag\n\nI) 100 grader er vands kogepunkt\n\nJ) 18 huller på en golfbane\n\nK) 90 grader i en ret vinkel\n\nL) 2.000 kr. for at passere start i Matador\n\nM) 3 sider på en advarsels­tavle\n\nN) 144 styk på en gros\n\nO) 4 kvarte på en hel\n\nP) 24 timer på et døgn\n\nQ) 1 horn på en enhjørning\n\nR) 4 cifre i et postnummer\n\nS) 7 fantastiske fortællinger af Karen Blixen\n\nT) 11 spillere på et fodboldhold\n\nU) 2 farver i det danske flag\n\nV) 29 dage i februar ved skudår\n\nW) 60 sekunder på et minut\n\nX) 40 dage og nætter i den store syndflod\n\nY) 7 dage på en uge\n\nZ) 3 små grise\n\nÆ) 7 bogstaver og tal på en nummerplade\n\nØ) 6 sider i en hexagon\n\nÅ) 30 forskellige frugter og urter i en Gammel Dansk."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
-        "title": "Et sandsynligt mord | Ingeniøren",
-        "url": "https://ing.dk/artikel/et-sandsynligt-mord",
-        "number": 237,
-        "text": "Opgave 237:\n\nPå slottet Finsterburg er sket et mord, og de fire ­mistænkte er en dansker, en svensker, en finne og en nordmand. De fire er af profession advokat, ejendomsmægler, ingeniør og officer. Inspektør Mörser finder ud af, at der er 30% sandsynlighed for, at morderen er advokat, og 70% for at han er ejendomsmægler.\n\nDe fire mistænkte vil ikke sige noget om deres profession, så her må inspektøren også have fat i sandsynlighederne. Ingeniøren er med 20% sandsynlighed dansker, og nordmanden er med 88% sandsynlighed ikke ejendomsmægler.\n\nEjendomsmægleren er med 24% sandsynlighed dansker eller nordmand. Finnen er med 84% sandsynlighed ikke ejendomsmægler. Ingeniøren er med 52% sandsynlighed svensker eller finne. Svenskeren er med 72% sandsynlighed officer eller ejendomsmægler.\n\nOfficeren er med 72% sandsynlighed ikke dansker. Endelig er finnen med 56% sandsynlighed ikke ingeniør, mens advokaten med 28% sandsynlighed er finne.\n\nHvilken nationalitet har den mest sandsynlige morder?"
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "Den mest sandsynlige morder er svenskeren, som med 48 procents sandsynlighed har udført mordet. ­Næstmest sandsynlige morder er danskeren med 20,4 procent, mens finnen scorer 19,4 procent og nordmanden kun 12 procent.\n\nResultatet fås, ved at vi ganger de betingede sandsynligheder sammen. Som mellemresultater har vi for eksempel, at danskeren med 40 procents sandsynlighed er advokat, og at svenskeren med 50 procent sandsynlighed er ejendomsmægler."
-      },
-      "evaluation": {
-        "text": null,
-        "verdict": null,
-        "score": null
-      }
-    },
-    {
-      "task": {
-        "title": "Hjælp postvæsnet i Strandby | Ingeniøren",
-        "url": "https://ing.dk/artikel/hjaelp-postvaesnet-i-strandby",
-        "number": 114,
-        "text": "Opgave 114:\n\nHele otte beboere i Strandby fik noget forkert i postkassen i sidste uge. Jørskov, som bor på Slotsmarken (men ikke i 47B) modtog en pakke, som var bestemt for Slotsdalen 47, mens Jørholt i nr. 478 fik Ingeniøren, som var adresseret til nr. 47B. Jørberg på Slotsvænget (ikke nr. 17A) modtog den pakke, som Jørgsted skulle have haft.\n\nJørborg, som fik brev fra Odense, har et lavere husnummer end dem, der bor på Slotsvejen, hvis pakke til gengæld havnede hos Jørgsted. Jørgstrup ventede noget fra Odense, men fik det tidsskrift, Jørborg havde bestilt.\n\nJørholm skulle hverken have pakke eller Ingeniøren, men modtog et postkort fra Italien. Modtagerne af Ingeniøren skulle have haft en anden tryksag, som i stedet blev afleveret på Slotsdalen. De, der skulle have haft en pakke fra Rønne, fik en avis.\n\nJørlings husnummer er uden bogstav og lavere end Jørgstrups, men højere end det i Slotsgade, hvortil pakken fra Odense kom. Husnummeret på Slotsstien er med bogstav, men det på Slotsbakken er uden.\n\nDe, der bare fik en forkert pakke, bor i nr. 41. Jørholm bor ikke i nr. 47. Familien i nr. 17 var ikke indblandet i nogen forvikling med dem i nr. 77 eller eller med hensyn til pakken fra Løgstør. Jørgstrup bor ikke i Slotsparken, hvor postkortet blev afleveret, og har tilmed et højere husnummer end det på Slotsdalen.\n\nHvem i Strandby skulle have haft Ingeniøren, og hvor bor de?"
-      },
-      "proposed": {
-        "presentation": null,
-        "structured": null
-      },
-      "official": {
-        "text": "Jørberg på Slotsvænget 47B skulle have haft Ingeniøren – men fik en pakke fra Løgstør\n\nSkemaet viser hele den postale forbytning."
+        "text": "Løsning på opgave 225: Hjælp den dødsdømte\n\nDen stakkels dødsdømte kan redde sig ved at blade begge fangevogtere ind i sit ene spørgsmål. For eksempel således:\n\n»Hvis jeg spurgte den anden fangevogter, om dette er døren til friheden, hvad ville han så svare?«\n\nUanset hvem den dødsdømte taler med, vil svaret være modsat virkeligheden. Så et nej betyder altså, at døren fører til friheden."
       },
       "evaluation": {
         "text": null,
@@ -103,17 +43,17 @@
     },
     {
       "task": {
-        "title": "Find det største heltal | Ingeniøren",
-        "url": "https://ing.dk/artikel/find-det-stoerste-heltal",
-        "number": 373,
-        "text": "Opgave 373:\n\nVi har fem heltal. Adderer vi forskellige af disse tal to og to, får vi totalt set følgende forskellige summer: 637, 669, 794, 915, 919, 951, 1040, 1072 og 1197. Hvad er det største af de fem heltal?"
+        "title": "Del 13 volt med seks modstande | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-13-volt-med-seks-modstande",
+        "number": 264,
+        "text": "Opgave 264:\n\nMax fandt et gammelt kredsløb med to ledninger ind og to ud. Når der er 13 V på indgangen, er der netop 1 V (ubelastet) på udgangen.\n\nDesværre var kredsløbet brændt sammen, så Max kunne ikke se, hvordan modstandene var forbundet. Men der var seks modstande på hver 10 Ohm, og de var ikke så store, så det gælder om at finde det kredsløb, hvor modstandene belastes mindst."
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Det største af de fem heltal er 659. Lad os kalde de fem heltal for a, b, c, d og e, hvor a er mindst og e størst.\n\nDe må alle være forskellige, for ellers var der færre end ni forskellige summer. Omvendt er der to talpar, som har den samme sum, idet der er ti ­forskellige talpar.\n\nVi ved nu, at d+e er den største sum, og c+e den næststørste. Altså er c+d+2e = 2269. 2e er lige, så c+d må være ulige.\n\nDet betyder, at 1040 ikke kan være c+d, men må være b+e. c+d kan nu være 951 eller 919, og regner vi videre på de to muligheder, viser det sig, at 951 er den rigtige. Det kan vi indsætte i den første ligning, hvor vi får, at 2e = 1318 eller e = 659."
+        "text": "Mindst mulige belastning af mostandene er 2,5 W – og i det bedste kredsløb på tegningen er det naturligvis de to modstande ved indgangen, som belastes mest."
       },
       "evaluation": {
         "text": null,
@@ -123,17 +63,17 @@
     },
     {
       "task": {
-        "title": "Beregn Børges baghave | Ingeniøren",
-        "url": "https://ing.dk/artikel/beregn-boerges-baghave",
-        "number": 280,
-        "text": "Opgave 280:\n\nBørge ­opdagede, at hans grund kan inddeles fuldstændigt i 13 kvadrater som vist på tegningen. Det mindste, sorte kvadrat er netop 1 kvadratmeter. Hvor stor er så hele Børges grund?"
+        "title": "Saml din egen fodbold | Ingeniøren",
+        "url": "https://ing.dk/artikel/saml-din-egen-fodbold",
+        "number": 356,
+        "text": "Opgave 356:\n\nMan kan dække en kugle med regulære femkanter og sekskanter, som samles, så de mødes tre og tre i hvert hjørne (og hverken overlapper eller har huller). Det er for eksempel sådan, en almindelig læderfodbold er lavet.\n\nHvor mange femkanter skal der bruges?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Børges grund er 933 ⅓ kvadratmeter stor. Den løsning findes ved at kalde et par kvadratsider x og y og derefter successivt opstille alle sammenhængene mellem kvadraternes sidelængder. På den måde ender man med to ligninger med to ubekendte.\n\nVælger vi for eksempel de to kvadrater lige til højre for den sorte firkant og kalder deres sider for x og y, så kan vi bevæge os rundt i Børges have nedefter og mod venstre og får udtrykt sidelængden af det midterste kvadrat foroven som 3x-y+6. Ergo har vi ligningen 3x-y+6 = x+y.\n\nPå tilsvarende vis kan vi bevæge os nedad fra midten af haven og rundt til højre, hvorved vi får 26x-15y+15 = x+y. Når de to ligninger er løst, finder vi grundens sidelængder til 25 meter og 37 ⅓ meter og deraf arealet."
+        "text": "Når man skal dække en kugle med regulære fem- og sekskanter, skal man altid bruge netop 12 femkanter. Det gælder sjovt nok uanset kuglens størrelse (og dermed antallet af sekskanter).\n\nFor at løse opgaven skal vi bruge Eulers regel: flader + hjørner = kanter + 2.\n\nHvis vi bruger f femkanter og s sekskanter, bliver antal flader f+s, og antal hjørner er (5f+6s)/3, idet netop tre af ‘5/6-kanterne’ skal mødes i hvert hjørne. Antal kanter er (5f+6s)/2. Eulers regel siger da f + s + (5f+6s)/3 = (5f+6s)/2 + 2 ­eller 8f/3 + 3s = 5f/2 + 3s + 2, hvoraf F = 12."
       },
       "evaluation": {
         "text": null,
@@ -143,17 +83,17 @@
     },
     {
       "task": {
-        "title": "Hvordan kom ministrene frem? | Ingeniøren",
-        "url": "https://ing.dk/artikel/hvordan-kom-ministrene-frem",
-        "number": 288,
-        "text": "Opgave 288:\n\nFire ministre var ­inviteret til fortrolig samtale med statsministeren et hemmeligt sted ude i byen. De havde kun én tandemcykel og én kørselsvejledning til fælles rådighed og skulle alle være på mødestedet i løbet af to timer.\n\nDe, som kørte på cyklen, skulle altid have vejldningen med, og hver for sig var de fire ministre 10, 20, 40 og 50 minutter om at cykle ruten (uanset om der var én eller to på cyklen – var der to gælder den langsomste tid!).\n\nVi præciserer, at de fire ministre naturligvis befandt sig samme sted, inden turene til mødet. Og så spørger vi bare: Hvordan klarede ministrene at komme frem i tide?"
+        "title": "Sig tillykke til Lis | Ingeniøren",
+        "url": "https://ing.dk/artikel/sig-tillykke-til-lis",
+        "number": 325,
+        "text": "Opgave 325:\n\nDet var en råkold vinterdag i 1990’erne, da Lis kom på besøg hos tante Erna. Talen faldt naturligt på deres respektive runde fødselsdage, og Erna bad Lis tage halvdelen af Ernas lagkagelysestager fra festen i januar, når Lis skulle fejres i næste uge.\n\n»Tak,« sagde Lis, der er ingeniør. »Når jeg tænder dem, er jeg præcis halvt så mange dage gammel som du.«\n\nDu tror ikke, der er oplysninger nok, men alligevel lyder spørgsmålet: Hvilket år er Lis født?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "De fire ministre kommer let frem til statsministeren i tide, hvis de blot sørger for, at de to langsomste ministre kun skal køre én gang – og sammen. Løsningen bliver derfor, at de to hurtigste kører af sted, og den ene kommer tilbage.\n\nDerefter kører de to langsomste af sted, og den anden hurtige tager cyklen ­tilbage. Og så kan de to hurtigste blot tage turen til statsministeren igen. Samlet tid: 20+10+50+20+20 minutter eller netop to timer."
+        "text": "Lis er født i 1948, nærmere bestemt den 2. februar. Og Erna er født 31. januar 1898. Den 2. februar 1998 har Erna dermed levet 36526 dage, præcis det dobbelte af Lis’ 18263 dage.\n\nDet særlige ved opgaven er, at der skal være en forskel på flere dage mellem Ernas alder i dage og det dobbelte af Lis’ alder. Det kræver, at Erna er født før år 1900, som jo ikke er et skudår, for så kan der være en forskel på to dage.\n\nBegge fejrer rund fødselsdag, og da 120 år er meren end nogen nulevende dansker er nået op på, må det være 100 år for Erna og 50 år for Lis.\n\nLis’ besøg finder sted i februar, mens Erna fejrede fødselsdag i januar. Samtidig siger de »næste uge« om Lis’ runde dag. Derfor må Erna have fødselsdag 31. januar og Lis den 2. februar, og 1. februar må være en søndag, så 2. februar ligger i næste uge.\n\nEneste år i 1990’erne med 1. februar på en søndag var 1998, så det er året, vi taler om."
       },
       "evaluation": {
         "text": null,
@@ -163,17 +103,17 @@
     },
     {
       "task": {
-        "title": "Find gevinsten på den enarmede | Ingeniøren",
-        "url": "https://ing.dk/artikel/find-gevinsten-paa-den-enarmede",
-        "number": 412,
-        "text": "Opgave 412:\n\nEn lidt speciel enarmet tyve­knægt har fem ruder, som hver med lige stor sandsynlighed viser et af cifrene fra 0 til 9.\n\nGevinsten udregnes herefter som produktet af de fem viste cifre – og udbetales i øre. Maksimalt kan man altså vinde 9 · 9 · 9 · 9 · 9 = 59049 øre ved et spil – og bare én af ruderne viser 0, vinder man ingenting.\n\nHvor stor skal indsatsen være på denne enarmede tyveknægt, for at det går lige op med den forventede gevinst på langt sigt?"
+        "title": "Byg en plankebro | Ingeniøren",
+        "url": "https://ing.dk/artikel/byg-en-plankebro",
+        "number": 281,
+        "text": "Opgave 281:\n\nI denne opgave gælder det om at komme over en 1,6 meter bred grøft ved hjælp af smalle planker på 1,5 meters længde, når det ikke er tilladt at bruge andet end plankerne. Hvor få planker kan man klare sig med?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Spilleautomaten giver i gennemsnit 1.845,28 øre i gevinst pr. spil. Så hvis ikke maskinens ejer skal tabe penge på den på langt sigt, skal indsatsen være 1.846 øre.\n\nIdet hver rude kan vise et af cifrene fra 0 til 9, viser den enarmede tyveknægt i alt 100.000 forskellige værdier i ruderne. Hver gang er gevinsten produktet af de fem cifre, og den gennemsnitlige gevinst er derfor summen af alle produkterne divideret med 100.000.\n\nDer er heldigvis en lettere måde at regne det ud på, for vi kan i stedet tage ­produktet af alle summerne, altså (0+1+2+3+4+5+6+7+8+9)5. Gevinsten bliver derfor i snit 455/105 = 1.845,28 øre."
+        "text": "Man kan komme over grøften med kun tre af de for korte planker. For eksempel sådan som tegningen viser.\n\nMan kan selvfølgelig klare sig med to planker, hvis man snyder, og grøften ikke er alt for dyb. Lad simpelthen en planke gå fra den ene bred og ned til bunden af grøften. Så kan den anden planke nå fra den modsatte bred og over til den første planke.\n\nOg har man en ven til at holde den ene ende af planken, kan man sågar nøjes med én. Men det er også snyd.\n\nSe flere Tænkeboks-opgaver her"
       },
       "evaluation": {
         "text": null,
@@ -183,17 +123,77 @@
     },
     {
       "task": {
-        "title": "Tæl fiskerens fangst | Ingeniøren",
-        "url": "https://ing.dk/artikel/tael-fiskerens-fangst",
-        "number": 370,
-        "text": "Opgave 370:\n\nEn fisker har fanget et antal fisk. De tre tungeste vejer tilsammen 35 procent af fangstens samlede vægt. Dem sælger han. Herefter udgør de tre letteste fisk tilsammen 5/13 af resten – igen efter vægt naturligvis."
+        "title": "Hjælp Børges søn med lommepengene | Ingeniøren",
+        "url": "https://ing.dk/artikel/hjaelp-boerges-soen-med-lommepengene",
+        "number": 144,
+        "text": "Opgave 144:\n\nBørges søn bad om ekstra lommepenge, men det syntes Børge, at han først skulle gøre sig fortjent til. Han gav derfor sønnen 10 røde og 10 grønne kugler, som bortset fra farven var ganske ens.\n\n»Fordel nu kuglerne i mine to lommer,« sagde Børge. »Læg dem helt, som du synes – der behøver ikke være lige mange i hver lomme. Så vender du ryggen til, og jeg bytter måske om på de to lommers indhold.\n\nDu vælger derefter en af mine lommer, og i den trækker du én kugle. Er den grøn, får du flere lommepenge, er den rød, får du ingen.«\n\nBørges søn kunne godt gennemskue, at han ikke kunne være sikker på flere lommepenge. Men hvordan skal han fordele kuglerne i Børges lommer for at have de bedste chancer?"
       },
       "proposed": {
         "presentation": null,
         "structured": null
       },
       "official": {
-        "text": "Fiskeren fangede ti fisk. Vi omregner vægten af de tre letteste fisk til procent – og 5/13 af 65 procent er 25 procent. Altså vejer de tre letteste fisk i gennemsnit hver 8,33 procent af fangsten, og de tre tungeste vejer i snit 11,67 procent.\n\nDe resterende fisk ­vejer tilsammen 40 procent af fangsten, og det kan kun passe, hvis der er fire, som i snit vejer 10 procent. Fem fisk ville betyde, at mindst én af dem var lettere end de letteste fisk, og tre fisk ville tilsvarende være for tunge. Ergo fangede fiskeren 3+4+3 = 10 fisk."
+        "text": "Børges søn har de bedste chancer for flere lommepenge, hvis han lægger en grøn kugle i den ene af Børges lommer og resten i den anden lomme. Så er chancen for at trække en grøn kugle fra en tilfældig af lommerne knap 74%."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Tæl til 12 med regnestykker | Ingeniøren",
+        "url": "https://ing.dk/artikel/tael-til-12-med-regnestykker",
+        "number": 224,
+        "text": "Opgave 224:\n\nHer er et smart regnestykke, hvor hvert bogstav står for et ciffer, positivt eller negativt (altså mellem -9 og 9). Ingen af bogstaverne står for det samme ciffer."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Y=-9, R=-8, Ø=-7, M=-5, J=-3, A=-2, N=-1, T=0, E=1, O=2, V=3, I=4, D=5, L=6, S=7 og F=8."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Del en trekant | Ingeniøren",
+        "url": "https://ing.dk/artikel/del-en-trekant",
+        "number": 110,
+        "text": "Opgave 110:\n\nDe to trekanter har samme højde og grundlinje.\n\nHvordan kan man med to lige snit dele den ene trekant i tre stykker, som kan lægges sammen til den anden trekant – når ­papiret ikke må vendes om?"
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Lægger vi de to trekanter over hinanden, ses det let, hvordan den ene kan skæres i tre stykker, som kan lægges sammen til den anden."
+      },
+      "evaluation": {
+        "text": null,
+        "verdict": null,
+        "score": null
+      }
+    },
+    {
+      "task": {
+        "title": "Skriv tal med mellemrum | Ingeniøren",
+        "url": "https://ing.dk/artikel/skriv-tal-med-mellemrum",
+        "number": 253,
+        "text": "Opgave 253:\n\nTag de hele tal fra 1 til n. Brug to af hver og arranger dem i rækkefølge, så der er ét tal imellem de to 1-taller, to tal imellem de to 2-taller osv.\n\nMed n=3 ser det sådan ud: 3 1 2 1 3 2 – og med n=4 er en mulig løsning: 4 1 3 1 2 4 3 2.\n\nLav nu nogle længere rækker efter samme system – for eksempel en med n=7."
+      },
+      "proposed": {
+        "presentation": null,
+        "structured": null
+      },
+      "official": {
+        "text": "Med n=7 har vi for eksempel løsningen 2-3-7-2-6-3-5-1-4-1-7-6-5-4, og for n=8 er en mulighed 2-3-8-2-7-3-6-1-5-1-4-8-7-6-5-4. Og der er masser af andre løsninger.\n\nTil gengæld er der ingen løsninger for n=5, 6, 9 eller 10. Der skal nemlig være et lige antal ulige talpar, for at en løsning er mulig."
       },
       "evaluation": {
         "text": null,

@@ -5,6 +5,7 @@ import os
 from dataclasses import dataclass
 from datetime import datetime
 import argparse
+from rich.progress import Progress
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import List, Optional
@@ -63,13 +64,21 @@ def main() -> None:
     parser.add_argument("--log-level", dest="log_level", default="INFO", help="Log-niveau (DEBUG, INFO, WARNING, ERROR)")
     args = parser.parse_args()
 
+    progress_bar = None
     def progress(prefix: str, i: int, n: int) -> None:
-        pct = int((i / max(n, 1)) * 100)
-        line = f"{prefix}: {i}/{n} ({pct}%)"
-        print("\r" + line, end="", flush=True)
+        nonlocal progress_bar
+        if progress_bar is None:
+            progress_bar = Progress()
+            progress_bar.start()
+            progress_bar.add_task(prefix, total=n)
+        task_id = progress_bar.task_ids[0]
+        progress_bar.update(task_id, completed=i, description=prefix)
 
     def progress_done() -> None:
-        print("\r", end="\n", flush=True)
+        nonlocal progress_bar
+        if progress_bar is not None:
+            progress_bar.stop()
+            progress_bar = None
 
     # Konfigurer logniveau
     logging.getLogger().setLevel(getattr(logging, args.log_level.upper(), logging.INFO))

@@ -22,7 +22,7 @@ Accept: Kørsel på 10–20 artikler er stabil, hurtig og uden unødige kald.
 ## 2) Parsing og parring af opgave/løsning
 - [x] Udvid løsning-detektor: også “Facit”, “Svar:”, “Sådan løses…”
 - [x] Kombinér “i+1”-heuristik med `bagsidens svar`-opslag pr. opgavenummer (fallback)
-- [ ] Bedre rensning af brødtekst; fjern nav/footer/relaterede links
+- [x] Bedre rensning af brødtekst; fjern nav/footer/relaterede links
 - [x] AMP/Wayback-normalisering; behold original URL i metadata
 
 Accept: ≥90% korrekt parring på et prøveudsæt; manuel spotcheck OK.
@@ -47,8 +47,8 @@ Accept: JSON/HTML/CSV er konsistente og dokumenterede.
 
 ## 5) CLI og UX
 - [x] Flags: `--limit`, `--since`, `--max-pages`, `--cache`, `--cache-backend`, `--cache-expire`, `--model`, `--rate-limit`, `--workers`, `--log-level`, `--timeout`, `--out-csv`
-- [ ] Progress/logging med `rich`/`tqdm`
-- [ ] Forbedr `bagside`: Enter=default run, Ctrl-C håndtering, husk sidste valg
+- [x] Progress/logging med `rich`/`tqdm`
+- [x] Forbedr `bagside`: Enter=default run, Ctrl-C håndtering, husk sidste valg (CSV-genvej tilføjet)
 - [x] `--one` virker også for `evaluate` og `site`
 
 Accept: Hurtig fejlfinding; tydelig feedback; bedre first-run-oplevelse.
@@ -59,14 +59,14 @@ Accept: Hurtig fejlfinding; tydelig feedback; bedre first-run-oplevelse.
 - [ ] CI: lint + tests på PR
 - [ ] Nightly: scrape/solve/evaluate/site og publicér (fx GitHub Pages)
 - [ ] Dockerfile + devcontainer
-- [ ] Gem rå HTML ved fejl for nemmere debug
+- [x] Gem rå HTML ved fejl for nemmere debug
 
 Accept: Grøn CI; stabil nightly; reproducerbare builds.
 
 ## 7) Dokumentation
-- [ ] Opdatér `README` med nye flags og workflows
+- [x] Opdatér `README` med nye flags og workflows
 - [ ] `CONTRIBUTING.md` (struktur, test, release)
-- [ ] Arkitektur-note: dataflow, datamodeller, templating
+- [x] Arkitektur-note: dataflow, datamodeller, templating (kort i `docs/overview.md`)
 
 Accept: Nye bidragydere kan køre projektet på 5 minutter.
 
@@ -83,3 +83,4 @@ Accept: Nye bidragydere kan køre projektet på 5 minutter.
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
 - 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor; fallback-parring; CSV; parallel evaluate.
+- 2025-08-10: Løste resterende parsing/rensning, rich progress, CSV-menu, paywall-debug dump; dokumentation opdateret.
