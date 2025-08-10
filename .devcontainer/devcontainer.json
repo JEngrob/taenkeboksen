@@ -1,0 +1,16 @@
+{
+  "name": "Bagsiden Dev",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {},
+  "postCreateCommand": "pip install -r requirements.txt && pre-commit install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
+

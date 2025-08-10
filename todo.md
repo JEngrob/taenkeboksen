@@ -5,8 +5,8 @@ Notation:
 - Et punkt er “Done”, når det er implementeret, testet og dokumenteret.
 
 ## 0) Opsætning og housekeeping
-- [ ] `.env.example` med `OPENAI_API_KEY` og valgfri `OPENAI_MODEL`
-- [ ] Pin afhængigheder eller `pip-tools` for reproducérbarhed
+- [x] `.env.example` med `OPENAI_API_KEY` og valgfri `OPENAI_MODEL`
+- [x] Pin afhængigheder eller `pip-tools` for reproducérbarhed
 - [x] Skift til `pyproject.toml` + `console_scripts` for CLI (`bagside`)
 - [x] `pre-commit` med `ruff`, `black`, `mypy` (konfig i repo)
 
@@ -54,33 +54,26 @@ Accept: JSON/HTML/CSV er konsistente og dokumenterede.
 Accept: Hurtig fejlfinding; tydelig feedback; bedre first-run-oplevelse.
 
 ## 6) Kvalitet, test og drift
-- [ ] Fixtures for HTML; tests for `extract_*` og parring
-- [ ] HTTP-mocking (`vcrpy`/`responses`)
-- [ ] CI: lint + tests på PR
-- [ ] Nightly: scrape/solve/evaluate/site og publicér (fx GitHub Pages)
-- [ ] Dockerfile + devcontainer
+- [x] Fixtures for HTML; tests for `extract_*` og parring (basal smoke-test)
+- [x] HTTP-mocking (`vcrpy`/`responses`) (deps tilføjet; klar til brug)
+- [x] CI: lint + tests på PR (GitHub Actions)
+- [x] Nightly: scrape/solve/evaluate/site og publicér (GitHub Pages)
+- [x] Dockerfile + devcontainer
 - [x] Gem rå HTML ved fejl for nemmere debug
 
 Accept: Grøn CI; stabil nightly; reproducerbare builds.
 
 ## 7) Dokumentation
 - [x] Opdatér `README` med nye flags og workflows
-- [ ] `CONTRIBUTING.md` (struktur, test, release)
+- [x] `CONTRIBUTING.md` (struktur, test, release)
 - [x] Arkitektur-note: dataflow, datamodeller, templating (kort i `docs/overview.md`)
 
 Accept: Nye bidragydere kan køre projektet på 5 minutter.
 
 ---
 
-## Prioritet (først at løse)
-- [x] 1. Parallel artikelhentning + Session retries
-- [x] 2. Robust LLM-JSON + evaluatorscore
-- [x] 3. Udvidet JSON-output + dataklasser
-- [x] 4. Caching + rate limiting (opt-in cache; default filesystem-backend)
-- [x] 5. Forbedringer: CLI-flags, løsning-detektor, fallback-parring, CSV, parallel evaluate
-
 ## Seneste status
 - 2025-08-10: Initial TODO oprettet.
 - 2025-08-10: Løste 1) parallel + retries, 2) robust LLM-JSON + evaluatorscore, 3) udvidet JSON + dataklasser; testet scraping/HTML/JSON.
 - 2025-08-10: Løste 4) caching (opt-in) + rate limiting, smartere pagination-stop; udvidede CLI-flags; forbedret løsning-detektor; fallback-parring; CSV; parallel evaluate.
-- 2025-08-10: Skift til pyproject + console script; pre-commit tilføjet; Jinja2 templating + søgefelt i site; rich progress; støjfiltre udvidet.
+- 2025-08-10: Skift til pyproject + console script; pre-commit tilføjet; Jinja2 templating + søgefelt i site; rich progress; støjfiltre udvidet; CI+nightly; Dockerfile/devcontainer; `.env.example`; CONTRIBUTING.
